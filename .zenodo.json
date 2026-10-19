@@ -1,0 +1,11 @@
+{
+  "title": "Digital Kitabe: code and data",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "description": "<p>Code and data accompanying the article <em>Digital Kitabe: A content-derived, verifiable identity embedded in IFC models through historical geometric pattern grammars</em> (submitted to Automation in Construction).</p><p>The Digital Kitabe is a model identity computed from the content of an IFC model through a canonical Merkle commitment (DK-C14N-1.1), stored inside the model with standard IFC entities, sealed in a signed append-only record and rendered as a pattern generated from historical geometric pattern grammars (DK-ENC-1.0).</p><p><b>paper/</b>: code that reproduces the experiments (E1–E5) and figures of the article, and the reported results (Merkle trees, signed test ledger, patterns). <b>tool/</b>: command-line tool to stamp, verify and identify IFC models. The Snowdon Towers sample model (Autodesk) is not included.</p><p>Code: MIT licence. Data in paper/results/: CC BY 4.0.</p>",
+  "creators": [
+    {"name": "Yılmaz, Ayşe", "affiliation": "Artvin Çoruh University"}
+  ],
+  "license": "MIT",
+  "keywords": ["BIM", "IFC", "Industry Foundation Classes", "Merkle tree", "model integrity", "blockchain", "hash visualisation", "geometric ornament"]
+}
