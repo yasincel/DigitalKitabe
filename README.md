@@ -3,7 +3,7 @@
 Code and data accompanying the article
 
 > **Digital Kitabe: A content-derived, verifiable identity embedded in IFC models through historical geometric pattern grammars**
-> Ayşe Yılmaz. Submitted to *Automation in Construction*.
+> Yasin Celik.
 
 The Digital Kitabe is a model identity that is computed from the content of an IFC model (a canonical Merkle commitment), stored inside the model with standard IFC entities (`Pset_DigitalKitabe` and a non-physical `IfcAnnotation` emblem), sealed in a signed append-only record and rendered as a pattern generated from historical geometric pattern grammars. Pattern regions mirror the Merkle hierarchy (storeys, disciplines, types), so that a change can be located approximately by eye, while binding verification remains the recomputation of the root.
 
