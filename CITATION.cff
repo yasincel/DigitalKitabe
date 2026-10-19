@@ -6,9 +6,9 @@ date-released: "2026-10-20"
 license: MIT
 type: software
 authors:
-  - family-names: "Yılmaz"
-    given-names: "Ayşe"
-    affiliation: "Artvin Çoruh University"
+  - family-names: "Celik"
+    given-names: "Yasin"
+    affiliation: "Architecture Department, Artvin Çoruh University, Artvin, Turkiye"
 keywords:
   - BIM
   - IFC
