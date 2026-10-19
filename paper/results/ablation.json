@@ -1,0 +1,18 @@
+[
+ {
+  "rule": "Fixed decimal grid, 1e-6 ft (DK-C14N-1.0)",
+  "n": 21
+ },
+ {
+  "rule": "Binary grid, 2^-20 ft, no offset",
+  "n": 167
+ },
+ {
+  "rule": "Binary grid, 2^-10 ft (directions 2^-20), no offset",
+  "n": 2
+ },
+ {
+  "rule": "Binary grid, 2^-10 ft (directions 2^-20), offset 2 - sqrt(2) (DK-C14N-1.1)",
+  "n": 0
+ }
+]

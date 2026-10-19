@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Dijital Kitabe ��� Kullan��m k��lavuzu</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style>body{font-family:Segoe UI,Arial,sans-serif;max-width:860px;margin:32px auto;padding:0 16px;line-height:1.55;color:#1b1b1b;background:#fff}
+  h1{border-bottom:3px solid #b08a3e;padding-bottom:6px}h2{margin-top:2em;color:#5a4214}
+  table{border-collapse:collapse;width:100%;margin:12px 0}td,th{border:1px solid #ccc;padding:6px 8px;vertical-align:top}th{background:#f6f1e6}
+  code{background:#f3f3f3;padding:1px 4px;border-radius:3px}pre{background:#1e1e1e;color:#eee;padding:12px;border-radius:6px;overflow-x:auto}pre code{background:none;color:inherit}
+  blockquote{border-left:4px solid #b08a3e;margin:12px 0;padding:4px 12px;background:#fbf8f1}</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Dijital Kitabe ��� Kullan��m k��lavuzu</h1>
+</header>
+<h1 id="dijital-kitabe-aracı-adım-adım-kullanım-kılavuzu">Dijital Kitabe
+aracı: adım adım kullanım kılavuzu</h1>
+<p>Bu kılavuz hiç program çalıştırmamış biri için yazıldı. Adımları
+sırayla izle, hiçbirini atlama.</p>
+<p>Araç dört iş yapar:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ne yapmak istiyorsun?</th>
+<th>Hangi dosyayı kullanacaksın?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Onaylı bir modelin kitabesini (amblem + desen + kayıt) üretmek</td>
+<td><code>2_KITABE_URET.bat</code></td>
+</tr>
+<tr class="even">
+<td>Gelen bir IFC dosyası onaylı modelle aynı mı, kontrol etmek</td>
+<td><code>3_DOGRULA.bat</code></td>
+</tr>
+<tr class="odd">
+<td>Onaylanmış bir revizyon için yeni kitabe (onarım kitabesi)
+üretmek</td>
+<td><code>4_REVIZYON.bat</code></td>
+</tr>
+<tr class="even">
+<td>Elindeki amblem/desen görselinden hangi binaya ait olduğunu
+bulmak</td>
+<td><code>5_TANI.bat</code></td>
+</tr>
+</tbody>
+</table>
+<p>İlk üç sözcüğü bil, yeter: - <strong>IFC dosyası:</strong> Revit,
+ArchiCAD gibi programlardan “IFC olarak dışa aktar” ile aldığın model
+dosyası (<code>.ifc</code>). - <strong>Kayıt dosyası:</strong> Aracın
+ürettiği <code>..._record.json</code> dosyası. Modelin “nüfus cüzdanı”
+gibidir. <strong>Asla silme.</strong> Doğrulama ve tanıma bununla
+yapılır. - <strong>Model kökü:</strong> 64 haneli bir kod (ör.
+<code>19de7e05…</code>). Modelin parmak izidir. Modelde tek bir kapı
+değişse bu kod da değişir.</p>
+<hr />
+<h2
+id="bölüm-a-kurulum-yalnızca-bir-kez-yapılır-yaklaşık-10-dakika">BÖLÜM
+A: Kurulum (yalnızca bir kez yapılır, yaklaşık 10 dakika)</h2>
+<h3 id="a1.-pythonu-kur">A1. Python’u kur</h3>
+<ol type="1">
+<li>Tarayıcıda <strong>https://www.python.org/downloads/</strong>
+adresine git.</li>
+<li>Sarı <strong>“Download Python 3.12.x”</strong> düğmesine bas (3.12
+ya da 3.13 olabilir; 3.14 ve üstünü seçme).</li>
+<li>İnen dosyayı çift tıkla.</li>
+<li><strong>ÇOK ÖNEMLİ:</strong> Açılan ilk pencerenin en altındaki
+<strong>“Add python.exe to PATH”</strong> kutusunu işaretle. Bunu
+unutursan hiçbir şey çalışmaz.</li>
+<li><strong>“Install Now”</strong> düğmesine bas, bitince
+<strong>“Close”</strong>.</li>
+</ol>
+<blockquote>
+<p>Kutuyu işaretlemeyi unuttuysan: aynı kurulum dosyasını tekrar
+çalıştır, <strong>“Modify”</strong> de, sonraki ekranda <strong>“Add
+Python to environment variables”</strong> kutusunu işaretle.</p>
+</blockquote>
+<h3 id="a2.-araç-klasörünü-yerleştir">A2. Araç klasörünü yerleştir</h3>
+<ol type="1">
+<li><code>DigitalKitabe_arac.zip</code> dosyasına sağ tıkla,
+<strong>“Tümünü ayıkla…”</strong> de.</li>
+<li>Çıkan <code>digital_kitabe</code> klasörünü kolay bir yere taşı.
+Önerim: <code>C:\kitabe\digital_kitabe</code> (Masaüstü de olur. Sadece
+klasör yolunda Türkçe karakter ve boşluk olmaması işleri
+kolaylaştırır.)</li>
+</ol>
+<p>Klasörün içinde şunları görmelisin:</p>
+<pre><code>1_KURULUM.bat   2_KITABE_URET.bat   3_DOGRULA.bat   4_REVIZYON.bat   5_TANI.bat
+dkitabe.py  dkcore.py  dkpattern.py  dksheet.py  requirements.txt  KULLANIM.md  ornek\</code></pre>
+<blockquote>
+<p><code>.bat</code> uzantısını göremiyorsan sorun değil; dosyaların
+adları yeter. Windows bunları “Windows Toplu İş Dosyası” diye
+gösterir.</p>
+</blockquote>
+<h3 id="a3.-gerekli-kütüphaneleri-kur">A3. Gerekli kütüphaneleri
+kur</h3>
+<ol type="1">
+<li><code>1_KURULUM.bat</code> dosyasına <strong>çift
+tıkla</strong>.</li>
+<li>Siyah bir pencere açılır, bir sürü yazı akar. Bekle (2–5 dakika,
+internet gerekir).</li>
+<li>Sonunda “Kurulum bitti” ve “Devam etmek için bir tuşa basın” yazar.
+Bir tuşa bas.</li>
+</ol>
+<blockquote>
+<p>Windows “Windows kişisel bilgisayarınızı korudu” derse: <strong>“Ek
+bilgi” → “Yine de çalıştır”</strong>. Bu dosyalar sadece aşağıdaki
+komutları çalıştırır, içlerini Not Defteri ile açıp görebilirsin.</p>
+</blockquote>
+<h3 id="a4.-deneme-kurulum-çalışıyor-mu">A4. Deneme (kurulum çalışıyor
+mu?)</h3>
+<ol type="1">
+<li><code>ornek</code> klasörünü aç. İçinde <code>demo_metric.ifc</code>
+adlı küçük bir model var.</li>
+<li>Bu dosyayı fareyle tut, <strong>geri klasöre dön ve
+<code>2_KITABE_URET.bat</code> dosyasının üzerine bırak</strong>.
+(Pratik yol: iki Gezgin penceresini yan yana aç.)</li>
+<li>Pencere “Kısa bir not yazın” diye sorar. <code>deneme</code> yaz,
+Enter’a bas.</li>
+<li>Birkaç saniye sonra şunu görmelisin:</li>
+</ol>
+<pre><code>TAMAM / DONE
+  Model kökü / model root : 934281cf2606690b5c8e0bdd7533ad768ffd9387c28b80773255eb37d0632671
+  Revizyon / revision      : 0</code></pre>
+<ol start="5" type="1">
+<li><code>ornek</code> klasöründe yeni bir
+<code>demo_metric_kitabe</code> klasörü oluşur. İçindeki
+<code>demo_metric_rev0_kitabe_emblem.png</code> dosyasını aç: amblemi
+göreceksin.</li>
+</ol>
+<p>Bunu gördüysen kurulum tamam.</p>
+<blockquote>
+<p>En üstte <code>No stream support: No module named 'lark'</code>
+yazısı çıkabilir. <strong>Önemsiz</strong>, görmezden gel.</p>
+</blockquote>
+<hr />
+<h2 id="bölüm-b-günlük-kullanım">BÖLÜM B: Günlük kullanım</h2>
+<h3 id="b1.-onaylı-modelin-kitabesini-üretmek-rev0">B1. Onaylı modelin
+kitabesini üretmek (Rev0)</h3>
+<p>Ne zaman: Proje onaylandığında, onaylanan IFC dosyası için
+<strong>bir kez</strong>.</p>
+<ol type="1">
+<li>Onaylı IFC dosyasını (ör. <code>Bina.ifc</code>)
+<strong><code>2_KITABE_URET.bat</code> üzerine sürükle
+bırak</strong>.</li>
+<li>Not sorulunca örneğin <code>Tasarim onayi</code> yaz, Enter.</li>
+<li>Bekle. Küçük modeller saniyeler, 200 MB’lık bir model 2–3 dakika
+sürer. Pencere donmuş gibi görünebilir, kapatma.</li>
+<li>“TAMAM” yazınca bir tuşa bas.</li>
+</ol>
+<p>IFC dosyasının <strong>yanında</strong> <code>Bina_kitabe</code> adlı
+bir klasör oluşur:</p>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Dosya</th>
+<th>Ne yapacaksın?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Bina_rev0_kitabe_emblem.png</code></td>
+<td><strong>Proje kitabesi amblemi.</strong> Pafta antetine,
+ruhsat/teslim belgelerine, sözleşme ekine koy.</td>
+</tr>
+<tr class="even">
+<td><code>Bina_rev0_kitabe.png</code> / <code>.svg</code></td>
+<td>Yalnızca desen. SVG, büyütülünce bozulmayan çizimdir (baskı
+için).</td>
+</tr>
+<tr class="odd">
+<td><code>Bina_rev0_with_kitabe.ifc</code></td>
+<td>Kimliği içine gömülmüş IFC. Karşı tarafa bunu gönderebilirsin.</td>
+</tr>
+<tr class="even">
+<td><code>Bina_rev0_kitabe_record.json</code></td>
+<td><strong>Kayıt dosyası. Sakla, yedekle, silme.</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Altın kural:</strong> Tüm kayıt dosyalarını tek bir klasörde
+topla, ör. <code>C:\kitabe\kayitlar</code>. Doğrulama ve tanıma için bu
+klasör lazım olacak.</p>
+<h3 id="b2.-gelen-bir-ifc-dosyasını-doğrulamak">B2. Gelen bir IFC
+dosyasını doğrulamak</h3>
+<p>Ne zaman: Yükleniciden, belediyeden ya da bir meslektaştan IFC
+geldiğinde, “bu onaylı modelin aynısı mı?” sorusu için.</p>
+<ol type="1">
+<li>Gelen IFC dosyasını <strong><code>3_DOGRULA.bat</code> üzerine
+sürükle bırak</strong>.</li>
+<li>Pencere “kayıt dosyasını bu pencerenin içine sürükleyin” der. Onaylı
+modelin <code>..._record.json</code> dosyasını <strong>siyah pencerenin
+içine</strong> sürükle bırak (dosya yolu kendiliğinden yazılır), Enter’a
+bas.</li>
+<li>Sonuç:
+<ul>
+<li><strong>DOĞRULANDI:</strong> İçerik onaylı modelle aynı. Dosya başka
+programda açılıp yeniden kaydedilmiş olsa bile bu sonuç değişmez.</li>
+<li><strong>UYUŞMUYOR:</strong> Araç neyin değiştiğini listeler (hangi
+kat, hangi disiplin, hangi eleman; eklendi/silindi/değişti). Ayrıca
+<code>..._verify_comparison.png</code> dosyası üretir: iki desen yan
+yana, değişen bölgeler kırmızı.</li>
+</ul></li>
+</ol>
+<h3 id="b3.-onaylanan-bir-revizyonun-kitabesi-rev1-rev2">B3. Onaylanan
+bir revizyonun kitabesi (Rev1, Rev2, …)</h3>
+<p>Ne zaman: Projede bir değişiklik <strong>onaylandığında</strong>.
+Böylece onarım kitabesi zinciri oluşur.</p>
+<ol type="1">
+<li>Revize edilmiş yeni IFC dosyasını
+<strong><code>4_REVIZYON.bat</code> üzerine sürükle bırak</strong>.</li>
+<li>Bir önceki onayın kayıt dosyasını (ör.
+<code>Bina_rev0_kitabe_record.json</code>) <strong>pencerenin
+içine</strong> sürükle, Enter.</li>
+<li>Revizyon notunu yaz (ör. <code>L3 kapi revizyonu</code>),
+Enter.</li>
+</ol>
+<p>Yeni klasörde <code>..._rev1_...</code> dosyaları oluşur. Yeni
+amblemin ortasında güncel desen, altında önceki onayların küçük
+madalyonları görünür. Ayrıca <code>..._rev0_vs_rev1.png</code>
+karşılaştırma görseli de üretilir.</p>
+<p>Bir sonraki revizyonda (Rev2) <strong>Rev1’in</strong> kayıt
+dosyasını vereceksin; hep bir öncekini.</p>
+<h3 id="b4.-görselden-binayı-bulmak-tanıma">B4. Görselden binayı bulmak
+(tanıma)</h3>
+<p>Ne zaman: Elinde sadece bir amblem ya da desen görseli var (bir
+paftadan, rapordan, ekran görüntüsünden) ve hangi projeye/revizyona ait
+olduğunu bilmek istiyorsun.</p>
+<ol type="1">
+<li>Görseli (PNG ya da JPG) <strong><code>5_TANI.bat</code> üzerine
+sürükle bırak</strong>.</li>
+<li>Kayıtlarının toplandığı klasörü (ör.
+<code>C:\kitabe\kayitlar</code>) <strong>pencerenin içine</strong>
+sürükle, Enter.</li>
+<li>Sonuç:
+<ul>
+<li><strong>EŞLEŞTİ:</strong> Araç proje adı, bina, adres, eleman/kat
+sayıları, disiplin dağılımı, revizyon geçmişi ve model kökünü
+yazar.</li>
+<li><strong>KISMİ EŞLEŞME:</strong> Büyük olasılıkla aynı binanın başka
+bir revizyonu; farklı görünen kat ve disiplinler listelenir.</li>
+<li><strong>EŞLEŞME YOK:</strong> Kayıtlı hiçbir modele ait değil.</li>
+</ul></li>
+</ol>
+<p>Bilmen gereken iki şey: - Bina bilgileri <strong>desenin içinde
+değil</strong>, eşleşen kayıttan okunur. Desen sadece modelin parmak
+izini taşır. Bu, model içeriğinin görselden sızmaması için bilinçli bir
+tercih. - Kâğıt baskının telefonla çekilmiş, eğik fotoğrafı henüz
+desteklenmiyor. PNG, PDF’ten alınmış ekran görüntüsü ve JPEG çalışır.
+Kesin karar her zaman B2’deki IFC doğrulamasıdır.</p>
+<hr />
+<h2 id="bölüm-c-bir-şey-ters-giderse">BÖLÜM C: Bir şey ters giderse</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Ne görüyorsun?</th>
+<th>Ne yapmalısın?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>'python' is not recognized…</code> /
+<code>'python' iç ya da dış komut olarak tanınmıyor</code></td>
+<td>Python kurulurken “Add to PATH” işaretlenmemiş. A1’deki nottaki gibi
+“Modify” ile düzelt, sonra bilgisayarı yeniden başlat.</td>
+</tr>
+<tr class="even">
+<td>Kurulumda
+<code>ERROR: Could not find a version that satisfies ifcopenshell</code></td>
+<td>Python sürümün çok yeni (3.14 vb.). Python 3.12’yi kur.</td>
+</tr>
+<tr class="odd">
+<td><code>No module named 'ifcopenshell'</code> (ya da numpy,
+scipy…)</td>
+<td><code>1_KURULUM.bat</code> çalıştırılmamış ya da yarıda kalmış.
+Tekrar çalıştır.</td>
+</tr>
+<tr class="even">
+<td><code>No stream support: No module named 'lark'</code></td>
+<td>Önemsiz uyarı, görmezden gel.</td>
+</tr>
+<tr class="odd">
+<td>Pencere açılıp hemen kapanıyor</td>
+<td>Dosyayı <code>.bat</code>’a çift tıklamak yerine <strong>üzerine
+sürükleyip bıraktığından</strong> emin ol (kurulum hariç).</td>
+</tr>
+<tr class="even">
+<td><code>MemoryError</code> ya da bilgisayar çok yavaşladı</td>
+<td>Model büyük ve RAM yetmiyor. Diğer programları kapat; 200 MB’lık
+model için 8 GB+ RAM gerekir.</td>
+</tr>
+<tr class="odd">
+<td><code>FileNotFoundError</code></td>
+<td>Dosya yolu yanlış. Kayıt dosyasını pencereye yazmak yerine
+sürükleyerek ver.</td>
+</tr>
+<tr class="even">
+<td>DOĞRULAMA “UYUŞMUYOR” diyor ama kimse modeli değiştirmedi</td>
+<td>Gerçekten bir şey değişmiş olabilir (ör. dışa aktarma ayarı farklı,
+bir eleman eksik). Listelenen GlobalId’leri Revit/ArchiCAD’de arayarak
+kontrol et.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="bölüm-d-komutları-elle-yazmak-isteğe-bağlı-ileri-düzey">BÖLÜM D:
+Komutları elle yazmak (isteğe bağlı, ileri düzey)</h2>
+<p><code>.bat</code> dosyaları aslında aşağıdaki komutları senin yerine
+yazar. Mac kullanıyorsan ya da kendin yazmak istersen:</p>
+<ol type="1">
+<li>Komut penceresini aç:
+<ul>
+<li><strong>Windows:</strong> <code>digital_kitabe</code> klasörünü aç,
+üstteki adres çubuğuna tıkla, <code>cmd</code> yaz, Enter. Pencere
+doğrudan o klasörde açılır.</li>
+<li><strong>Mac:</strong> Klasöre sağ tık → “Klasörde Yeni Terminal”.
+(Mac’te <code>python</code> yerine <code>python3</code> yaz.)</li>
+</ul></li>
+<li>Kurulum (bir kez):
+<code>python -m pip install -r requirements.txt</code></li>
+<li>Komutlar:</li>
+</ol>
+<pre><code>python dkitabe.py stamp    &quot;C:\projeler\Bina.ifc&quot; --note &quot;Tasarim onayi&quot;
+python dkitabe.py verify   &quot;C:\gelen\Bina_yeni.ifc&quot; &quot;C:\kitabe\kayitlar\Bina_rev0_kitabe_record.json&quot;
+python dkitabe.py stamp    &quot;C:\projeler\Bina_rev1.ifc&quot; --previous &quot;C:\kitabe\kayitlar\Bina_rev0_kitabe_record.json&quot; --note &quot;L3 kapi revizyonu&quot;
+python dkitabe.py identify &quot;C:\belgeler\amblem.png&quot; &quot;C:\kitabe\kayitlar&quot;</code></pre>
+<p>Ek seçenekler: <code>--out KLASOR</code> (çıktıları başka klasöre
+yaz), <code>--no-embed</code> (kimlik gömülmüş IFC kopyası üretme; büyük
+modellerde zaman kazandırır). Yardım için:
+<code>python dkitabe.py --help</code></p>
+<hr />
+<h2 id="bölüm-e-makale-kodu-paketi-ne-olacak">BÖLÜM E: Makale kodu
+paketi ne olacak?</h2>
+<p>Zenodo/GitHub paketindeki <code>paper/</code> klasörü <strong>senin
+çalıştırman gereken bir şey değil.</strong> Makaledeki deneyleri (E1–E5)
+ve şekilleri üreten koddur; dergi “Data availability” bölümünde söz
+verdiğimiz için yayımlanır, hakem isterse inceler. Günlük kullanım için
+yalnızca bu araç klasörü (<code>tool/</code>) yeter.</p>
+<h2 id="notlar">Notlar</h2>
+<ul>
+<li><strong>Desen bir tanıma aracıdır, güvenlik aracı değildir.</strong>
+Bağlayıcı karar her zaman doğrulamanın verdiği kök
+karşılaştırmasıdır.</li>
+<li><strong>Kayıt dosyası</strong> bu sürümde yereldir; ileride imzalı
+bir deftere ya da blockchain’e yazma adımı eklenebilir.</li>
+<li><strong>Amblem modelde nerede durur:</strong> Binanın bir parçası
+değil, projenin sembolüdür. IFC içinde fiziksel olmayan bir
+IfcAnnotation (DigitalKitabeEmblem) olarak bina orijininde durur.</li>
+<li><strong>Disiplin kodları:</strong> Ekranda makaledeki kodlar
+görünür: STR, WAL, FAC, OPN, CIR, FUR, SPC, OTH.</li>
+<li>Araç, makaledeki kuralların aynısını kullanır: DK-C14N-1.1 ve
+DK-ENC-1.0.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,276 @@
+{
+ "base": {
+  "root": "19de7e05791d31b846dd543a8891fae6b8baebc57d9221705c604bfe22b96464",
+  "file_sha": "1c81209f45604eca02c1024e212861bd8728fdcf82c1c5e8909e7d4eb71cc6e5",
+  "t_load": 17.481379508972168,
+  "t_tree": 67.04544401168823,
+  "leaves": 7957,
+  "size_mb": 204.236494,
+  "n_entities": 3692400
+ },
+ "stability": [
+  {
+   "name": "Kaynak dosya (Revit dışa aktarımı)",
+   "file_sha": "1c81209f45604eca02c1024e212861bd8728fdcf82c1c5e8909e7d4eb71cc6e5",
+   "root": "19de7e05791d31b846dd543a8891fae6b8baebc57d9221705c604bfe22b96464",
+   "size": 204236494
+  },
+  {
+   "name": "T1: IfcOpenShell ile yeniden yazılmış",
+   "file_sha": "efca06611fee76c4fd3bf11b24f745cc8e2a22318190f83f0103b0df9a80c4bc",
+   "root": "19de7e05791d31b846dd543a8891fae6b8baebc57d9221705c604bfe22b96464",
+   "size": 196127261
+  },
+  {
+   "name": "T2: Kimlikler yeniden numaralanmış, satırlar karıştırılmış, zaman damgaları değiştirilmiş",
+   "file_sha": "d3db7990d9adfe8e13441990740d0339c22f5644a12c75eb795a5a49b37d0f5b",
+   "root": "19de7e05791d31b846dd543a8891fae6b8baebc57d9221705c604bfe22b96464",
+   "size": 204011600
+  }
+ ],
+ "entrance": {
+  "gid": "3RKbg7mVv5KOhSWj4h$MPB",
+  "name": "Door-Exterior-Revolving-Full Glass-Metal:78\" x 108\":1506352",
+  "origin": [
+   1370159.682362958,
+   258220.2745395348,
+   778.0416666666663
+  ],
+  "x": [
+   -0.8986750261834819,
+   -0.4386150901577807,
+   0.0
+  ],
+  "storey": "L1 - Block 37"
+ },
+ "embed": {
+  "root_after": "19de7e05791d31b846dd543a8891fae6b8baebc57d9221705c604bfe22b96464",
+  "equal": true,
+  "n_ann": 1,
+  "n_pset": 1,
+  "curves": 341,
+  "points": 2762,
+  "file_sha": "b95a5c2395497237fdc940cbaa58f784e4c2880371620b4e0680c8bf67870531",
+  "size_mb": 196.362047,
+  "pset_values": {
+   "ModelRootHash": "19de7e05791d31b846dd543a8891fae6b8baebc57d9221705c604bfe22b96464",
+   "ChainRootHash": "e9f06fa9fb18190632360808e9b9c7461dcc3df53be8050d91036f8e3cc433ae",
+   "PreviousRootHash": "0000000000000000000000000000000000000000000000000000000000000000",
+   "RevisionIndex": 0,
+   "HashAlgorithm": "SHA-256",
+   "CanonicalizationVersion": "DK-C14N-1.1",
+   "LedgerID": "DK-TESTNET-LOCAL",
+   "TransactionID": "d16464b256ba27755c20e1517e0397b1ec812cd9a43a25071f7a0087245b27a7",
+   "Signers": "Architect;Client;Municipality (Ed25519)",
+   "PatternFamily": "Star rosette (star-and-polygon)",
+   "SymmetryGroup": "C8 centre / C18 storey ring",
+   "Channels": "colour(2b);motif variant(2b);chirality(1b);rotation(1b)",
+   "EncodingSchemeVersion": "DK-ENC-1.0",
+   "RegionMap": "root=centre+crown; storey=inner ring (by elevation, clockwise); storey x discipline=outer ring; non-spatial=corners",
+   "SourcePlate": "Plates XIV, XXVII, XXV (layout principle)"
+  },
+  "root_without_exclusion": "b1b3a6a2e0efd8f973ba7d9b75b0e3d94cd9f4fcceefded1633936669dac8df5"
+ },
+ "revisions": [
+  {
+   "rev": 1,
+   "note": "Storey L3: door (Door-Passage-Single-Flush) moved by 0.50 m",
+   "gid": "321qo6Jt58aRGW1V_sawAN",
+   "root": "7f1edfc6d658890e10f4b76116aaeb5d6602566e64ad784738329278453c8a86",
+   "chain_root": "73d3ca7ba719eb738025bf5ee7bad4e0fa9b8cf87940857b4b400955c0641cd9",
+   "diff": [
+    [
+     "L3",
+     [
+      "ACK"
+     ],
+     [
+      [
+       "ACK",
+       "321qo6Jt58aRGW1V_sawAN",
+       "değişti"
+      ]
+     ]
+    ]
+   ],
+   "nonspatial_changed": false,
+   "t_tree": 67.91344594955444
+  },
+  {
+   "rev": 2,
+   "note": "Storey L4: wall FireRating changed NR -> 1 HR",
+   "gid": "28fEL2KJH3nefH9oQJhuSU",
+   "root": "9e5fa0bf381dadd662ce3d6a6180cbd8144f789c9322b1c8c96c7d8f6d230016",
+   "chain_root": "2e4c2ab7abe9fd2275028656dee0a5fd2be0e090a745699808df5cfaa0987e7b",
+   "diff": [
+    [
+     "L4",
+     [
+      "DUV"
+     ],
+     [
+      [
+       "DUV",
+       "28fEL2KJH3nefH9oQJhuSU",
+       "değişti"
+      ]
+     ]
+    ]
+   ],
+   "nonspatial_changed": false,
+   "t_tree": 70.22326159477234
+  },
+  {
+   "rev": 3,
+   "note": "Storey L2: furnishing element (Counter Top) deleted",
+   "gid": "28fEL2KJH3nefH9oQJhuQb",
+   "root": "9adb8a9dfdd6a9691d634078739518da002b7b2b87a769d6e737d2f00191ff49",
+   "chain_root": "466237e5689a719688730b273a6802b4e415ef3cc75c1b0c860c6c255409d6e2",
+   "diff": [
+    [
+     "L2",
+     [
+      "DON"
+     ],
+     [
+      [
+       "DON",
+       "28fEL2KJH3nefH9oQJhuQb",
+       "silindi"
+      ]
+     ]
+    ]
+   ],
+   "nonspatial_changed": false,
+   "t_tree": 69.33923506736755
+  },
+  {
+   "rev": 4,
+   "note": "Door type \"Door-Passage-Single-Flush:36\" x 84\" (180 MIN)\": FireRating 180 MIN -> 120 MIN (type level)",
+   "gid": "0MTxlG7n1qyeN9yefKxk_y",
+   "root": "ada783ababfd433005ec308c20b84da740a7dd3625071c0df7eb5bb216dbf763",
+   "chain_root": "24772586bb74bbde54b33ce8b772dc688a31f8cf5f5978e2609d017f7fa1a360",
+   "diff": [],
+   "nonspatial_changed": true,
+   "t_tree": 68.67206072807312
+  }
+ ],
+ "ledger": [
+  {
+   "index": 0,
+   "rev": 0,
+   "model_root": "19de7e05791d31b846dd543a8891fae6b8baebc57d9221705c604bfe22b96464",
+   "chain_root": "e9f06fa9fb18190632360808e9b9c7461dcc3df53be8050d91036f8e3cc433ae",
+   "prev_chain_root": "0000000000000000000000000000000000000000000000000000000000000000",
+   "note": "Design approval (Rev0)",
+   "signers": [
+    "Mimar",
+    "İşveren",
+    "Belediye"
+   ],
+   "sigs": {
+    "Mimar": "21714db6e3f473c69cd21314acd1d8bb4554da427bf3cfbdd23e8f1e9a2b1a7b04b8378aeda192a8fd06a9b495b40f62a7f2038ed2f81835f526891ca48ffd02",
+    "İşveren": "163af77dcd57cd68f8f8cd7ad10baf92080499251a04806d4a0c9b42cc121e6de14d7f68e47de2f5e9dd98158f080e287299ec00ed51e43426d560ec58989105",
+    "Belediye": "844ddc819d9972c9c01be0ef0d812834f4c4fec958c9a8dc590d8ede6381dc4a6f0ee5d7eb096cbee7c61addae89871383ffe5ccd58f83b23f706da888eb0f09"
+   },
+   "c14n": "DK-C14N-1.1",
+   "enc": "DK-ENC-1.0",
+   "prev_block": "0000000000000000000000000000000000000000000000000000000000000000",
+   "timestamp": "2026-10-16T12:00:00+03:00",
+   "block_hash": "d16464b256ba27755c20e1517e0397b1ec812cd9a43a25071f7a0087245b27a7"
+  },
+  {
+   "index": 1,
+   "rev": 1,
+   "model_root": "7f1edfc6d658890e10f4b76116aaeb5d6602566e64ad784738329278453c8a86",
+   "chain_root": "73d3ca7ba719eb738025bf5ee7bad4e0fa9b8cf87940857b4b400955c0641cd9",
+   "prev_chain_root": "e9f06fa9fb18190632360808e9b9c7461dcc3df53be8050d91036f8e3cc433ae",
+   "note": "Storey L3: door (Door-Passage-Single-Flush) moved by 0.50 m",
+   "signers": [
+    "Mimar",
+    "İşveren",
+    "Belediye"
+   ],
+   "sigs": {
+    "Mimar": "f14d110a98464cafa72fca3bf66d272de033a4cd3a5b6eaee06e1db04cf83a449950e02d887aefa1918ce563a76f1ba7bb309176e1c4e4ad42539d9ee962c80e",
+    "İşveren": "c9259e2c123fc9a6790d4d88f0fe0946631907d016e0d2d05b362706e6b426c7904285020007580df2506f683f5743225ca22dd088a81c2d84247cd4c1e3450b",
+    "Belediye": "7aa4c265c5817a45a71a45a62c9b98cd4da6004ab21c5825aa62b9fb7296c3139e1ab6af4971c1f3886830eeaf710ecf1fe16fc91196aa92c684a7c2aefba209"
+   },
+   "c14n": "DK-C14N-1.1",
+   "enc": "DK-ENC-1.0",
+   "prev_block": "d16464b256ba27755c20e1517e0397b1ec812cd9a43a25071f7a0087245b27a7",
+   "timestamp": "2026-10-17T12:00:00+03:00",
+   "block_hash": "568e481cb69cb4fce38a4c30b0184b9c0e50f585d54bbd847077f89650bc0c41"
+  },
+  {
+   "index": 2,
+   "rev": 2,
+   "model_root": "9e5fa0bf381dadd662ce3d6a6180cbd8144f789c9322b1c8c96c7d8f6d230016",
+   "chain_root": "2e4c2ab7abe9fd2275028656dee0a5fd2be0e090a745699808df5cfaa0987e7b",
+   "prev_chain_root": "73d3ca7ba719eb738025bf5ee7bad4e0fa9b8cf87940857b4b400955c0641cd9",
+   "note": "Storey L4: wall FireRating changed NR -> 1 HR",
+   "signers": [
+    "Mimar",
+    "İşveren",
+    "Belediye"
+   ],
+   "sigs": {
+    "Mimar": "c60fe882bd630ae8c42583d8fb946f3f02c456d3bb33541c025a9f172290f070ad860a92e16dde20eef95b773a06861e53534d30d051099ad53020a46e52ad09",
+    "İşveren": "7164414d1dcbd9c85480332c9b8beb3bdec60b1355d7788d63196a49dda6c382640263a42a91ff77b7c658adbfe075fc7474d875e4f46bccaef8887433e76b09",
+    "Belediye": "40b0347879d87a69275e400129e6d6e45777bc71cc226bd5a620a9725cee3b6b0982008a51024dc281002289e8f7e222933163a765e182081f2af903915b7a05"
+   },
+   "c14n": "DK-C14N-1.1",
+   "enc": "DK-ENC-1.0",
+   "prev_block": "568e481cb69cb4fce38a4c30b0184b9c0e50f585d54bbd847077f89650bc0c41",
+   "timestamp": "2026-10-18T12:00:00+03:00",
+   "block_hash": "39afe0b49c3abf811d49f039d0e077c89ec11068902fe741f20623e0624ad445"
+  },
+  {
+   "index": 3,
+   "rev": 3,
+   "model_root": "9adb8a9dfdd6a9691d634078739518da002b7b2b87a769d6e737d2f00191ff49",
+   "chain_root": "466237e5689a719688730b273a6802b4e415ef3cc75c1b0c860c6c255409d6e2",
+   "prev_chain_root": "2e4c2ab7abe9fd2275028656dee0a5fd2be0e090a745699808df5cfaa0987e7b",
+   "note": "Storey L2: furnishing element (Counter Top) deleted",
+   "signers": [
+    "Mimar",
+    "İşveren",
+    "Belediye"
+   ],
+   "sigs": {
+    "Mimar": "7002d836907f3de2da6f5249ce2d7adfe2ed70830b0e4d3fba44ecb84e82bd99dd9dbcb9f9830be8779ccd11ddc68e12ef047c32702d1d7a0cd0cbebdf680001",
+    "İşveren": "25a4813c10dcdf43ade914502b32185d8edcf59bddfab44ac17ed11bf9e76ab87f5c1c8de2496e5f925824e582aaf7617a46d64290a6d045aee3746905c59e0b",
+    "Belediye": "379f38fdccd7d4836e7f794df37939aa7278fd967fe45af75baf89d4ca5c5135eeac8b11be715b101f9c092460769bc2064e0ac79ea7ae347fb0f0cf092c3b02"
+   },
+   "c14n": "DK-C14N-1.1",
+   "enc": "DK-ENC-1.0",
+   "prev_block": "39afe0b49c3abf811d49f039d0e077c89ec11068902fe741f20623e0624ad445",
+   "timestamp": "2026-10-19T12:00:00+03:00",
+   "block_hash": "21bd85d887e9c7ed8d09cf2cb14fc7cd5dedcac9493e48ce968739c7d4304fb3"
+  },
+  {
+   "index": 4,
+   "rev": 4,
+   "model_root": "ada783ababfd433005ec308c20b84da740a7dd3625071c0df7eb5bb216dbf763",
+   "chain_root": "24772586bb74bbde54b33ce8b772dc688a31f8cf5f5978e2609d017f7fa1a360",
+   "prev_chain_root": "466237e5689a719688730b273a6802b4e415ef3cc75c1b0c860c6c255409d6e2",
+   "note": "Door type \"Door-Passage-Single-Flush:36\" x 84\" (180 MIN)\": FireRating 180 MIN -> 120 MIN (type level)",
+   "signers": [
+    "Mimar",
+    "İşveren",
+    "Belediye"
+   ],
+   "sigs": {
+    "Mimar": "a7b13648cd8584e76a3ac96ac65712fa5346a7ce15b574f9c44c9cab9e32001d41f41dd147551c1e498bcaf8fec4f49c6ce7526287263cb1a481f404bf69060f",
+    "İşveren": "8e7e3f1e2566a3f67d7ec8b6990e802a125bf8a325fc1ff3e2a13cd1ba89e106e4325df5c4c4711639d10b23d4ef6be5fbbf0610d32464ec46ba0e860a754c0a",
+    "Belediye": "e8320335a44909781607aa13f593b494b4e6e3d3abd806615437cb1e06011785140a371e1998094899cbce4568ecd6fdefa9297f79172cb8502656c78980eb08"
+   },
+   "c14n": "DK-C14N-1.1",
+   "enc": "DK-ENC-1.0",
+   "prev_block": "21bd85d887e9c7ed8d09cf2cb14fc7cd5dedcac9493e48ce968739c7d4304fb3",
+   "timestamp": "2026-10-20T12:00:00+03:00",
+   "block_hash": "fd61466e9d0a397a9ed3123f7b9c78b0a5db06b6e81e92cb99c1a84e2c0b8a89"
+  }
+ ],
+ "ledger_ok": true
+}

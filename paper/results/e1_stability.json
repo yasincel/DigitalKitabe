@@ -1,0 +1,31 @@
+{
+ "base": {
+  "root": "19de7e05791d31b846dd543a8891fae6b8baebc57d9221705c604bfe22b96464",
+  "file_sha": "1c81209f45604eca02c1024e212861bd8728fdcf82c1c5e8909e7d4eb71cc6e5",
+  "t_load": 19.032599687576294,
+  "t_tree": 71.82439661026001,
+  "leaves": 7957,
+  "size_mb": 204.236494,
+  "n_entities": 3692400
+ },
+ "stability": [
+  {
+   "name": "Source file (Revit export)",
+   "file_sha": "1c81209f45604eca02c1024e212861bd8728fdcf82c1c5e8909e7d4eb71cc6e5",
+   "root": "19de7e05791d31b846dd543a8891fae6b8baebc57d9221705c604bfe22b96464",
+   "size": 204236494
+  },
+  {
+   "name": "T1: re-serialised with IfcOpenShell",
+   "file_sha": "efca06611fee76c4fd3bf11b24f745cc8e2a22318190f83f0103b0df9a80c4bc",
+   "root": "19de7e05791d31b846dd543a8891fae6b8baebc57d9221705c604bfe22b96464",
+   "size": 196127261
+  },
+  {
+   "name": "T2: renumbered, shuffled, timestamps changed",
+   "file_sha": "80586a173b3c0eadf8f330ab2991ab3f976dee71549bcde1f5a9357fdc9918b3",
+   "root": "19de7e05791d31b846dd543a8891fae6b8baebc57d9221705c604bfe22b96464",
+   "size": 200994204
+  }
+ ]
+}
