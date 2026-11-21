@@ -473,6 +473,17 @@ def cmd_verify(a):
     out = a.out or os.path.dirname(os.path.abspath(a.model))
     name = os.path.splitext(os.path.basename(a.model))[0]
     log('')
+    # rule (v): report every object left out of the commitment, so that nothing is excluded silently
+    excl = [e for e in f.by_type('IfcProduct') if dkcore.is_dk(e)]
+    named = [e for e in f.by_type('IfcRoot') if dkcore.is_dk_by_name(e) and not dkcore.is_dk(e)
+             and not e.is_a('IfcRelationship') and not (e.is_a('IfcPropertySet') and e.Name == dkcore.DK_PSET
+             and all(o.is_a('IfcProject') or o.is_a('IfcBuilding') for r in (getattr(e, 'DefinesOccurrence', None) or getattr(e, 'PropertyDefinitionOf', None) or []) for o in r.RelatedObjects))]
+    log(f'  Hesaba katılmayan amblem nesneleri / emblem objects excluded: {len(excl)}')
+    if any(getattr(e, 'Representation', None) and any(r.RepresentationType not in ('GeometricCurveSet', 'Curve2D', 'Annotation2D')
+           for r in e.Representation.Representations) for e in excl):
+        log('  UYARI / WARNING: amblem olarak işaretli bir nesne eğri dışı geometri taşıyor; elle inceleyin.')
+    if named:
+        log(f'  NOT / NOTE: adı DigitalKitabe ile başlayan {len(named)} başka nesne var; bunlar kimliğe DAHİLDİR (included in the root).')
     if ok:
         log('DOĞRULANDI / VERIFIED: model, kayıttaki onaylı sürümle aynı içeriğe sahip.')
         log(f'  root {tr["root"].hex()}  (revision {rec["revision"]})')

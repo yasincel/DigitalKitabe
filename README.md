@@ -73,12 +73,18 @@ Schependomlaan design model of the buildingSMART community sample files, SHA-256
 export WEBIFC=/path/to/dk-roundtrip
 python paper/e7_generalisation.py out_e7 AC20-FZK-Haus.ifc Office_A_20110811.ifc dental_clinic.ifc FM_ARC_DigitalHub.ifc schependomlaan.ifc
 python paper/e8_revisions.py out_e8 schependomlaan.ifc
+python paper/e2b_exclusion.py out_e2b AC20-FZK-Haus.ifc Office_A_20110811.ifc dental_clinic.ifc FM_ARC_DigitalHub.ifc schependomlaan.ifc
 ```
 
 Expected: the model root is identical for the source, T1 (IfcOpenShell), T2 (renumbered and shuffled), T3 (web-ifc)
 and E (embedded) in all five models; under fixed decimal rounding 23 and 2 elements differ after T1 in Office_A and
 the dental clinic; each Schependomlaan revision changes exactly one storey, one discipline and one leaf, or only the
-non-spatial branch for the type change. Version 1.1.0 also fixes a cache key in `dkcore.set_mask` that mixed
+non-spatial branch for the type change. Version 1.1.0 also replaces the name-based exclusion rule of the first prototype by a structural one: only the emblem
+(a non-physical `IfcAnnotation` with `ObjectType = DigitalKitabeEmblem`) is left out of the commitment, because a rule
+based on names let a physical element named `DigitalKitabe…` or a property set named `Pset_DigitalKitabe` on any element
+escape the root. `paper/e2b_exclusion.py` reproduces this test on the five public models; `dkitabe.py verify` now lists
+every excluded object. Roots of models without such objects, including all roots reported in the article, are unchanged.
+Version 1.1.0 also fixes a cache key in `dkcore.set_mask` that mixed
 attribute lists of IFC2X3 and IFC4 when models of both schemas were processed in one run; roots of single models are unchanged.
 
 ## Data (`paper/results/`)
@@ -89,7 +95,7 @@ attribute lists of IFC2X3 and IFC4 when models of both schemas were processed in
 | `e1_stability.json`, `ablation.json` | E1 stability and quantisation ablation |
 | `ledger.json` | Ed25519-signed, append-only **local test ledger** (a simulation; not written to a public blockchain) |
 | `sim.json` | E5 simulation results |
-| `e7_stability.json`, `e8_revisions.json` | E7 generalisation test: roots per model and variant, fixed-rounding comparison, Schependomlaan revisions |
+| `e2b_exclusion.json`, `e7_stability.json`, `e8_revisions.json` | E7 generalisation test: roots per model and variant, fixed-rounding comparison, Schependomlaan revisions |
 | `merkle_tree_rev0..4.json` | derived Merkle trees (digests only, hexadecimal) of the approved model and the four controlled revisions |
 | `patterns/` | Digital Kitabe patterns (SVG) for Rev0–Rev4 and the project emblem after Rev4 |
 

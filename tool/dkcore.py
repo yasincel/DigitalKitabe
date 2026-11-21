@@ -24,6 +24,7 @@ C14N_VERSION = 'DK-C14N-1.1'
 Q_OFFSET = 2.0 - math.sqrt(2.0)
 DK_PREFIX = 'DigitalKitabe'
 DK_PSET = 'Pset_DigitalKitabe'
+DK_EMBLEM_TYPE = 'DigitalKitabeEmblem'
 
 DISCIPLINES = [
     ('YAP', 'Taşıyıcı ve döşeme', ('IfcColumn', 'IfcBeam', 'IfcSlab', 'IfcRoof', 'IfcFooting')),
@@ -61,6 +62,19 @@ def node_hash(label: str, children) -> bytes:
 
 
 def is_dk(e):
+    """Objects excluded by rule (v). Only the emblem itself is excluded, identified by its structure:
+    a non-physical IfcAnnotation whose ObjectType is DigitalKitabeEmblem. Pset_DigitalKitabe is attached
+    only to IfcProject and IfcBuilding, whose property sets do not enter the tree, so no property set is
+    excluded. Excluding by name alone would let a physical element named 'DigitalKitabe...' or a property
+    set named Pset_DigitalKitabe on any element escape the commitment."""
+    try:
+        return e.is_a('IfcAnnotation') and getattr(e, 'ObjectType', None) == DK_EMBLEM_TYPE
+    except Exception:
+        return False
+
+
+def is_dk_by_name(e):
+    """Name-based rule of the first prototype (kept only for the vulnerability test E8)."""
     try:
         n = e.Name
     except Exception:

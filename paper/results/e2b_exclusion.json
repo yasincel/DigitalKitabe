@@ -1,0 +1,77 @@
+{
+ "AC20-FZK-Haus": {
+  "source_root_equal_under_both_rules": true,
+  "EMB": {
+   "name": true,
+   "structural": true
+  },
+  "A1_disguised_wall": {
+   "name": false,
+   "structural": true
+  },
+  "A2_disguised_pset": {
+   "name": false,
+   "structural": true
+  }
+ },
+ "Office_A_20110811": {
+  "source_root_equal_under_both_rules": true,
+  "EMB": {
+   "name": true,
+   "structural": true
+  },
+  "A1_disguised_wall": {
+   "name": false,
+   "structural": true
+  },
+  "A2_disguised_pset": {
+   "name": false,
+   "structural": true
+  }
+ },
+ "dental_clinic": {
+  "source_root_equal_under_both_rules": true,
+  "EMB": {
+   "name": true,
+   "structural": true
+  },
+  "A1_disguised_wall": {
+   "name": false,
+   "structural": true
+  },
+  "A2_disguised_pset": {
+   "name": false,
+   "structural": true
+  }
+ },
+ "FM_ARC_DigitalHub": {
+  "source_root_equal_under_both_rules": true,
+  "EMB": {
+   "name": true,
+   "structural": true
+  },
+  "A1_disguised_wall": {
+   "name": false,
+   "structural": true
+  },
+  "A2_disguised_pset": {
+   "name": false,
+   "structural": true
+  }
+ },
+ "schependomlaan": {
+  "source_root_equal_under_both_rules": true,
+  "EMB": {
+   "name": true,
+   "structural": true
+  },
+  "A1_disguised_wall": {
+   "name": false,
+   "structural": true
+  },
+  "A2_disguised_pset": {
+   "name": false,
+   "structural": true
+  }
+ }
+}

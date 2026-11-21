@@ -134,10 +134,10 @@ R['embed'] = dict(root_after=trk['root'].hex(), equal=trk['root'] == base['root'
                   pset_values={p.Name: p.NominalValue.wrappedValue for p in psk[0].HasProperties})
 print('EMBED', R['embed']['equal'], R['embed']['root_after'], flush=True)
 # negatif kontrol: dışlama kuralı olmasaydı
-dkcore_DK = dkcore.DK_PREFIX
-dkcore.DK_PREFIX = '__none__'; dkcore.DK_PSET_SAVE = dkcore.DK_PSET; dkcore.DK_PSET = '__none__'
+dkcore_DK = dkcore.DK_EMBLEM_TYPE
+dkcore.DK_EMBLEM_TYPE = '__none__'
 trn, _ = timed_tree(g)
-dkcore.DK_PREFIX = dkcore_DK; dkcore.DK_PSET = dkcore.DK_PSET_SAVE
+dkcore.DK_EMBLEM_TYPE = dkcore_DK
 R['embed']['root_without_exclusion'] = trn['root'].hex()
 del trn; gc.collect()
 
