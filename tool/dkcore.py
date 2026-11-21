@@ -72,7 +72,7 @@ _SETMASK = {}
 
 
 def set_mask(e):
-    t = e.is_a()
+    t = e.is_a(True)  # schema-qualified, e.g. IFC4.IfcWall: attribute lists differ between schemas
     m = _SETMASK.get(t)
     if m is None:
         decl = e.wrapped_data.declaration().as_entity()

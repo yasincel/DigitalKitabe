@@ -1,0 +1,192 @@
+{
+ "AC20-FZK-Haus": {
+  "file": "AC20-FZK-Haus.ifc",
+  "size_mb": 2.570803,
+  "sha": "70cc8ff245fc0894201d96496c031005a5cbd7a96b22d8a1b87c5a883fb77994",
+  "root": "1fadc5c65c60f430ca34fd5de18c711b5ee8befa160d15a342ed2c9bf5257bce",
+  "t_tree": 0.6720364093780518,
+  "app": "ARCHICAD-64 20.0.0",
+  "unit": " METRE",
+  "schema": "IFC4",
+  "entities": 44249,
+  "storeys": 2,
+  "elements": 123,
+  "variants": {
+   "T1": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 0.589209794998169,
+    "c10_elements_differing": 0
+   },
+   "T2": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 0.621753454208374
+   },
+   "T3": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 0.6885616779327393,
+    "c10_elements_differing": 0
+   },
+   "E": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 0.6227188110351562,
+    "dk_objects": 1
+   }
+  }
+ },
+ "Office_A_20110811": {
+  "file": "Office_A_20110811.ifc",
+  "size_mb": 4.099307,
+  "sha": "3ccc7df480d7ae9d1af148d13634fe1af8f1a75949fdf3cb1f87c60464df4700",
+  "root": "d051ed6974d905d3bb74af34b3cd4194ebcfc4f25c03ec97752b98b8a1725103",
+  "t_tree": 1.5293259620666504,
+  "app": "Autodesk Revit Architecture 2011 2011",
+  "unit": " METRE",
+  "schema": "IFC2X3",
+  "entities": 62930,
+  "storeys": 3,
+  "elements": 1085,
+  "variants": {
+   "T1": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 1.6699702739715576,
+    "c10_elements_differing": 23
+   },
+   "T2": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 1.6459548473358154
+   },
+   "T3": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 1.6607496738433838,
+    "c10_elements_differing": 0
+   },
+   "E": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 1.622399091720581,
+    "dk_objects": 1
+   }
+  }
+ },
+ "dental_clinic": {
+  "file": "dental_clinic.ifc",
+  "size_mb": 13.003205,
+  "sha": "2ac970ce065ecac4e0c9e5f453a257169e90d0067f419b7e33533a64ef837880",
+  "root": "78195153f0a7619cf79aa7a89361317fe21ff9eb1f28a516c8e95e6f044519c3",
+  "t_tree": 5.257527112960815,
+  "app": "Autodesk Revit Architecture 2011 2011",
+  "unit": " METRE",
+  "schema": "IFC2X3",
+  "entities": 209259,
+  "storeys": 4,
+  "elements": 3292,
+  "variants": {
+   "T1": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 5.4952003955841064,
+    "c10_elements_differing": 2
+   },
+   "T2": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 5.702593803405762
+   },
+   "T3": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 5.295697450637817,
+    "c10_elements_differing": 0
+   },
+   "E": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 5.503528356552124,
+    "dk_objects": 1
+   }
+  }
+ },
+ "FM_ARC_DigitalHub": {
+  "file": "FM_ARC_DigitalHub.ifc",
+  "size_mb": 14.322717,
+  "sha": "eff9b18a0a2fce6180d8f25c8cfe0e986d4d2e4a7a3ee69f375a105b20ca593c",
+  "root": "02f30ca91b82f78fdae4c183cddd1b46d838fff98015edb067a89a399ab0711a",
+  "t_tree": 3.460587739944458,
+  "app": "Autodesk Revit 2019 (DEU) 2019",
+  "unit": " METRE",
+  "schema": "IFC4",
+  "entities": 266483,
+  "storeys": 3,
+  "elements": 1032,
+  "variants": {
+   "T1": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 3.234153985977173,
+    "c10_elements_differing": 0
+   },
+   "T2": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 3.9855382442474365
+   },
+   "T3": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 3.896512269973755,
+    "c10_elements_differing": 0
+   },
+   "E": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 3.966980457305908,
+    "dk_objects": 1
+   }
+  }
+ },
+ "schependomlaan": {
+  "file": "schependomlaan.ifc",
+  "size_mb": 49.286967,
+  "sha": "2c3565ca1904f2aa61adab92024cf3755b2c5b21a498144d3094d7cb58cebec7",
+  "root": "42311e450f6a386c39d74ae5cc2212edff29df7fecdfc59b5aae164974cba5fd",
+  "t_tree": 12.347527027130127,
+  "app": "ArchiCAD-64 18.0.0",
+  "unit": "MILLI METRE",
+  "schema": "IFC2X3",
+  "entities": 714485,
+  "storeys": 6,
+  "elements": 3814,
+  "variants": {
+   "T1": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 12.569557189941406,
+    "c10_elements_differing": 0
+   },
+   "T2": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 13.19361424446106
+   },
+   "T3": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 11.924930810928345,
+    "c10_elements_differing": 0
+   },
+   "E": {
+    "root_equal": true,
+    "file_sha_equal": false,
+    "t_tree": 12.203628063201904,
+    "dk_objects": 1
+   }
+  }
+ }
+}

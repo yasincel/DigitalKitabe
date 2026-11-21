@@ -1,0 +1,102 @@
+{
+ "t_tree": 12.393446207046509,
+ "root0": "42311e450f6a386c39d74ae5cc2212edff29df7fecdfc59b5aae164974cba5fd",
+ "revisions": [
+  {
+   "rev": 1,
+   "note": "Storey 01: door moved by 500 mm",
+   "gid": "04E1PaUW1Fze4qITB_nFaa",
+   "root": "29de655163295574e0db36b7f0b37d6af5983c99433c79abb3ab1ad6d9dbd874",
+   "chain_root": "cf9e2634f76bd474e94166f1223c16ad2f289f7502e1c36bf323bede608d76f1",
+   "storeys_changed": [
+    "01 eerste verdieping"
+   ],
+   "disciplines_changed": [
+    [
+     "ACK"
+    ]
+   ],
+   "leaves_changed": [
+    [
+     "ACK",
+     "04E1PaUW1Fze4qITB_nFaa",
+     "değişti"
+    ]
+   ],
+   "nonspatial_changed": false,
+   "n_storeys": 1,
+   "n_disc": 1,
+   "n_leaves": 1,
+   "target_found": true
+  },
+  {
+   "rev": 2,
+   "note": "Storey 02: wall property IsExternal False -> True",
+   "gid": "0$rXI4QKH23g$k0kmZL$uo",
+   "root": "9210b0b92cf4f1257e7a15e48fc848464ea70e1004338945d4182626103b45aa",
+   "chain_root": "f3e92f1838c208b62692a781f13259740c53dba3c63fcbe3f2d1a7b56caa4b70",
+   "storeys_changed": [
+    "02 tweede verdieping"
+   ],
+   "disciplines_changed": [
+    [
+     "DUV"
+    ]
+   ],
+   "leaves_changed": [
+    [
+     "DUV",
+     "0$rXI4QKH23g$k0kmZL$uo",
+     "değişti"
+    ]
+   ],
+   "nonspatial_changed": false,
+   "n_storeys": 1,
+   "n_disc": 1,
+   "n_leaves": 1,
+   "target_found": true
+  },
+  {
+   "rev": 3,
+   "note": "Storey 03: railing deleted",
+   "gid": "05ajDVemL5uvOYzxRLkb$L",
+   "root": "eced9762b546a7b8859aac9da50530bd6c47801efda9622ac2163e6de5869b68",
+   "chain_root": "9db54409a1793282c02aa06dcdda03df6da0c8eac192d2018354b00160916754",
+   "storeys_changed": [
+    "03 derde verdieping"
+   ],
+   "disciplines_changed": [
+    [
+     "DOL"
+    ]
+   ],
+   "leaves_changed": [
+    [
+     "DOL",
+     "05ajDVemL5uvOYzxRLkb$L",
+     "silindi"
+    ]
+   ],
+   "nonspatial_changed": false,
+   "n_storeys": 1,
+   "n_disc": 1,
+   "n_leaves": 1,
+   "target_found": true
+  },
+  {
+   "rev": 4,
+   "note": "Door style renamed (type level)",
+   "gid": "0OPcnl4oosHn9PWe2T7YJK",
+   "root": "2b835dc1dd5bacdb553b0b78f2e1c6db580b05dfd89e13790142a1a72d88c1f3",
+   "chain_root": "8954618f57330c8e49f0951da4595eb0f8614c7f3b8f9f7c33b42c1d96a558f7",
+   "storeys_changed": [],
+   "disciplines_changed": [],
+   "leaves_changed": [],
+   "nonspatial_changed": true,
+   "n_storeys": 0,
+   "n_disc": 0,
+   "n_leaves": 0,
+   "target_found": true
+  }
+ ]
+}

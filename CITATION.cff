@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this software or data, please cite the article and this archive."
 title: "Digital Kitabe: code and data"
-version: "1.0.0"
-date-released: "2026-10-20"
+version: "1.1.0"
+date-released: "2026-11-22"
 license: MIT
 type: software
 authors:

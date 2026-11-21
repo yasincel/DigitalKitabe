@@ -60,6 +60,27 @@ run_all.bat           # Windows
 
 Expected values: model root `19de7e05791d31b846dd543a8891fae6b8baebc57d9221705c604bfe22b96464` for the source, T1 and T2, and the ablation counts 21 / 167 / 2 / 0. Timings depend on the machine. The Ed25519 keys of the test ledger are generated afresh on every run, so public keys and signatures differ from the archived ledger, whereas all model roots and revision roots are deterministic. The control root computed with the self-reference exclusion disabled (Section 6.2) also differs between runs, because the embedded emblem objects receive newly generated GlobalIds; only the fact that it differs from the model root is relevant. Change types in the branch comparison are printed with internal Turkish labels (eklendi = added, silindi = deleted, değişti = changed).
 
+### Generalisation test (E7, added in version 1.1.0)
+
+E7 repeats the stability and embedding tests on five openly available models and adds a third writer, web-ifc,
+and applies four controlled revisions to the Schependomlaan model. The models are taken from the public test set of
+web-ifc (`tests/ifcfiles/public` in https://github.com/ThatOpen/engine_web-ifc): `AC20-FZK-Haus.ifc`,
+`Office_A_20110811.ifc`, `dental_clinic.ifc`, `FM_ARC_DigitalHub.ifc` and `schependomlaan.ifc` (identical to the
+Schependomlaan design model of the buildingSMART community sample files, SHA-256 `2c3565ca…cebec7`).
+
+```
+# build the web-ifc round-trip tool once (see paper/webifc_roundtrip/README.md), then
+export WEBIFC=/path/to/dk-roundtrip
+python paper/e7_generalisation.py out_e7 AC20-FZK-Haus.ifc Office_A_20110811.ifc dental_clinic.ifc FM_ARC_DigitalHub.ifc schependomlaan.ifc
+python paper/e8_revisions.py out_e8 schependomlaan.ifc
+```
+
+Expected: the model root is identical for the source, T1 (IfcOpenShell), T2 (renumbered and shuffled), T3 (web-ifc)
+and E (embedded) in all five models; under fixed decimal rounding 23 and 2 elements differ after T1 in Office_A and
+the dental clinic; each Schependomlaan revision changes exactly one storey, one discipline and one leaf, or only the
+non-spatial branch for the type change. Version 1.1.0 also fixes a cache key in `dkcore.set_mask` that mixed
+attribute lists of IFC2X3 and IFC4 when models of both schemas were processed in one run; roots of single models are unchanged.
+
 ## Data (`paper/results/`)
 
 | File | Content |
@@ -68,6 +89,7 @@ Expected values: model root `19de7e05791d31b846dd543a8891fae6b8baebc57d9221705c6
 | `e1_stability.json`, `ablation.json` | E1 stability and quantisation ablation |
 | `ledger.json` | Ed25519-signed, append-only **local test ledger** (a simulation; not written to a public blockchain) |
 | `sim.json` | E5 simulation results |
+| `e7_stability.json`, `e8_revisions.json` | E7 generalisation test: roots per model and variant, fixed-rounding comparison, Schependomlaan revisions |
 | `merkle_tree_rev0..4.json` | derived Merkle trees (digests only, hexadecimal) of the approved model and the four controlled revisions |
 | `patterns/` | Digital Kitabe patterns (SVG) for Rev0–Rev4 and the project emblem after Rev4 |
 
