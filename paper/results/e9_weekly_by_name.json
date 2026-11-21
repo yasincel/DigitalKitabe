@@ -1,0 +1,67 @@
+[
+ {
+  "a": "Week 26 26 june IFC Schependomlaan incl planningsdata.ifc",
+  "b": "Week 27 3 july IFC Schependomlaan incl planningsdata.ifc",
+  "elements_b": 1025,
+  "globalids_shared": 0,
+  "matched_by_name": 854,
+  "content_unchanged": 854,
+  "content_changed": 0,
+  "added": 171,
+  "removed": 0,
+  "duplicate_names_skipped": 0,
+  "changed_by_class": []
+ },
+ {
+  "a": "Week 27 3 july IFC Schependomlaan incl planningsdata.ifc",
+  "b": "Week 28 10 july IFC Schependomlaan incl planningsdata.ifc",
+  "elements_b": 1552,
+  "globalids_shared": 0,
+  "matched_by_name": 1025,
+  "content_unchanged": 1025,
+  "content_changed": 0,
+  "added": 527,
+  "removed": 0,
+  "duplicate_names_skipped": 0,
+  "changed_by_class": []
+ },
+ {
+  "a": "Week 28 10 july IFC Schependomlaan incl planningsdata.ifc",
+  "b": "Week 29 17 july IFC Schependomlaan incl planningsdata.ifc",
+  "elements_b": 1690,
+  "globalids_shared": 0,
+  "matched_by_name": 1552,
+  "content_unchanged": 1552,
+  "content_changed": 0,
+  "added": 138,
+  "removed": 0,
+  "duplicate_names_skipped": 0,
+  "changed_by_class": []
+ },
+ {
+  "a": "Week 29 17 july IFC Schependomlaan incl planningsdata.ifc",
+  "b": "Week 30 24 july IFC Schependomlaan incl planningsdata.ifc",
+  "elements_b": 1722,
+  "globalids_shared": 0,
+  "matched_by_name": 1690,
+  "content_unchanged": 1690,
+  "content_changed": 0,
+  "added": 32,
+  "removed": 0,
+  "duplicate_names_skipped": 0,
+  "changed_by_class": []
+ },
+ {
+  "a": "Week 30 24 july IFC Schependomlaan incl planningsdata.ifc",
+  "b": "Week 37 11 sept IFC Schependomlaan incl planningsdata.ifc",
+  "elements_b": 3505,
+  "globalids_shared": 0,
+  "matched_by_name": 1722,
+  "content_unchanged": 1722,
+  "content_changed": 0,
+  "added": 1783,
+  "removed": 0,
+  "duplicate_names_skipped": 0,
+  "changed_by_class": []
+ }
+]

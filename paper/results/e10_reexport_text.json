@@ -1,0 +1,140 @@
+{
+ "records_a": 7469604,
+ "records_b": 7469604,
+ "records_only_in_one": 0,
+ "records_differing": 236,
+ "differing_by_type": [
+  [
+   "IFCRELDEFINESBYTYPE",
+   118
+  ],
+  [
+   "IFCRAMPFLIGHTTYPE",
+   61
+  ],
+  [
+   "IFCTYPEPRODUCT",
+   40
+  ],
+  [
+   "IFCSLABTYPE",
+   17
+  ]
+ ],
+ "differences_explained_by_regenerated_globalid": 236,
+ "regenerated_objects_by_type": [
+  [
+   "IFCRELDEFINESBYTYPE",
+   118
+  ],
+  [
+   "IFCRAMPFLIGHTTYPE",
+   61
+  ],
+  [
+   "IFCTYPEPRODUCT",
+   40
+  ],
+  [
+   "IFCSLABTYPE",
+   17
+  ]
+ ],
+ "elements_typed_by_regenerated_types": 118,
+ "affected_element_classes": [
+  [
+   "IFCRAMPFLIGHT",
+   61
+  ],
+  [
+   "IFCSTAIR",
+   40
+  ],
+  [
+   "IFCSLAB",
+   17
+  ]
+ ],
+ "affected_storeys": [
+  [
+   "not directly contained",
+   78
+  ],
+  [
+   "L2",
+   16
+  ],
+  [
+   "L4",
+   5
+  ],
+  [
+   "L1 - Block 37",
+   5
+  ],
+  [
+   "Parking",
+   3
+  ],
+  [
+   "L3",
+   3
+  ],
+  [
+   "L1 - Block 35",
+   3
+  ],
+  [
+   "L5",
+   3
+  ],
+  [
+   "L1 - Block 43",
+   1
+  ],
+  [
+   "R1",
+   1
+  ]
+ ],
+ "storeys_total": 20,
+ "affected_storeys_resolved": [
+  [
+   "L1 - Block 37",
+   80
+  ],
+  [
+   "L2",
+   19
+  ],
+  [
+   "L4",
+   5
+  ],
+  [
+   "Parking",
+   3
+  ],
+  [
+   "L3",
+   3
+  ],
+  [
+   "L1 - Block 35",
+   3
+  ],
+  [
+   "L5",
+   3
+  ],
+  [
+   "L1 - Block 43",
+   1
+  ],
+  [
+   "R1",
+   1
+  ]
+ ],
+ "storeys_affected": 9
+}

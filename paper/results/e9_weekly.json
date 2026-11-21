@@ -1,0 +1,343 @@
+{
+ "weeks": [
+  {
+   "file": "Week 26 26 june IFC Schependomlaan incl planningsdata.ifc",
+   "size_mb": 14.843114,
+   "root": "04842f5bc48fcdd345378eb218dfd657b41aba1ba027eb5e812c9c8bb6348ef8",
+   "t_tree": 3.401104211807251,
+   "elements": 854,
+   "storeys": 1,
+   "nonspatial": "29bba60bca5679ff9c6895f0d52b9952ebd66ab25c19a2387172d2bb4f48c66c",
+   "bld_level": 0,
+   "timestamp": "2015-09-16T17:02:00",
+   "top_classes": [
+    [
+     "IfcWall",
+     255
+    ],
+    [
+     "IfcSlab",
+     145
+    ],
+    [
+     "IfcCovering",
+     129
+    ],
+    [
+     "IfcBeam",
+     90
+    ],
+    [
+     "IfcWallStandardCase",
+     88
+    ],
+    [
+     "IfcWindow",
+     84
+    ]
+   ]
+  },
+  {
+   "file": "Week 27 3 july IFC Schependomlaan incl planningsdata.ifc",
+   "size_mb": 19.547479,
+   "root": "d7103b553edd96363945193308f2024bf5906d73109806437216cce985fa6abc",
+   "t_tree": 4.65528678894043,
+   "elements": 1025,
+   "storeys": 1,
+   "nonspatial": "03a85dbf8181d9fae26f21e0fd2debb1f2e6f6163816e15f35191c5af19efe00",
+   "bld_level": 0,
+   "timestamp": "2015-09-16T17:05:00",
+   "top_classes": [
+    [
+     "IfcWall",
+     255
+    ],
+    [
+     "IfcWindow",
+     237
+    ],
+    [
+     "IfcSlab",
+     145
+    ],
+    [
+     "IfcCovering",
+     129
+    ],
+    [
+     "IfcBeam",
+     90
+    ],
+    [
+     "IfcWallStandardCase",
+     88
+    ]
+   ]
+  },
+  {
+   "file": "Week 28 10 july IFC Schependomlaan incl planningsdata.ifc",
+   "size_mb": 26.715414,
+   "root": "0def607753d66c0970e08418593fb60b33a2228413bf8b6b192cf29e0688fca8",
+   "t_tree": 6.377309799194336,
+   "elements": 1552,
+   "storeys": 1,
+   "nonspatial": "3e0c509489512a0da8561d26ea0fef2c930f774ec27205d75c15fc3a46e59398",
+   "bld_level": 0,
+   "timestamp": "2015-09-16T17:07:00",
+   "top_classes": [
+    [
+     "IfcWall",
+     433
+    ],
+    [
+     "IfcCovering",
+     401
+    ],
+    [
+     "IfcWindow",
+     237
+    ],
+    [
+     "IfcSlab",
+     145
+    ],
+    [
+     "IfcBeam",
+     127
+    ],
+    [
+     "IfcWallStandardCase",
+     100
+    ]
+   ]
+  },
+  {
+   "file": "Week 29 17 july IFC Schependomlaan incl planningsdata.ifc",
+   "size_mb": 28.765558,
+   "root": "7475a4355ea5f13347e617e69e35ef8f69cd21483f1cde5ae8f98513290e2427",
+   "t_tree": 6.2843499183654785,
+   "elements": 1690,
+   "storeys": 1,
+   "nonspatial": "fb0d0791757edc87de192877018d166c083582abcc9a49ff356730a30f3e7dd3",
+   "bld_level": 0,
+   "timestamp": "2015-09-16T17:09:00",
+   "top_classes": [
+    [
+     "IfcWall",
+     436
+    ],
+    [
+     "IfcCovering",
+     426
+    ],
+    [
+     "IfcWindow",
+     237
+    ],
+    [
+     "IfcSlab",
+     170
+    ],
+    [
+     "IfcBeam",
+     165
+    ],
+    [
+     "IfcWallStandardCase",
+     110
+    ]
+   ]
+  },
+  {
+   "file": "Week 30 24 july IFC Schependomlaan incl planningsdata.ifc",
+   "size_mb": 30.292565,
+   "root": "37acd3f02fe014be65a3fc7b318a211473c0020476f4c925e37489adc34e002f",
+   "t_tree": 6.676664113998413,
+   "elements": 1722,
+   "storeys": 1,
+   "nonspatial": "a976c0bdd74fdd0685ac27f82ed7521d4a805a40e556960747aa6524d751d3dd",
+   "bld_level": 0,
+   "timestamp": "2015-09-16T17:11:00",
+   "top_classes": [
+    [
+     "IfcWall",
+     448
+    ],
+    [
+     "IfcCovering",
+     432
+    ],
+    [
+     "IfcWindow",
+     249
+    ],
+    [
+     "IfcSlab",
+     170
+    ],
+    [
+     "IfcBeam",
+     165
+    ],
+    [
+     "IfcWallStandardCase",
+     111
+    ]
+   ]
+  },
+  {
+   "file": "Week 37 11 sept IFC Schependomlaan incl planningsdata.ifc",
+   "size_mb": 65.064843,
+   "root": "262d17ba6834f8eee08b96c81b0d2a00f62577bb2154cf73bfd7352a47b4278e",
+   "t_tree": 14.990814685821533,
+   "elements": 3505,
+   "storeys": 1,
+   "nonspatial": "8031be8033b8454f72178ebce80927bf92d55191e43b565731d217a7752817c5",
+   "bld_level": 0,
+   "timestamp": "2015-09-16T17:14:00",
+   "top_classes": [
+    [
+     "IfcCovering",
+     1214
+    ],
+    [
+     "IfcWall",
+     648
+    ],
+    [
+     "IfcSlab",
+     279
+    ],
+    [
+     "IfcBuildingElementPart",
+     277
+    ],
+    [
+     "IfcWindow",
+     259
+    ],
+    [
+     "IfcWallStandardCase",
+     232
+    ]
+   ]
+  }
+ ],
+ "pairs": [
+  {
+   "a": "Week 26 26 june IFC Schependomlaan incl planningsdata.ifc",
+   "b": "Week 27 3 july IFC Schependomlaan incl planningsdata.ifc",
+   "root_changed": true,
+   "added": 1025,
+   "deleted": 854,
+   "changed": 0,
+   "unchanged": 0,
+   "moved_between_nodes": 0,
+   "storeys_changed": 1,
+   "storeys_total": 1,
+   "disc_nodes_changed": 6,
+   "disc_nodes_total": 8,
+   "disc_nodes_explained": true,
+   "nonspatial_changed": true,
+   "changed_by_discipline": [],
+   "added_by_storey": [
+    [
+     "Storey-1",
+     1025
+    ]
+   ]
+  },
+  {
+   "a": "Week 27 3 july IFC Schependomlaan incl planningsdata.ifc",
+   "b": "Week 28 10 july IFC Schependomlaan incl planningsdata.ifc",
+   "root_changed": true,
+   "added": 1552,
+   "deleted": 1025,
+   "changed": 0,
+   "unchanged": 0,
+   "moved_between_nodes": 0,
+   "storeys_changed": 1,
+   "storeys_total": 1,
+   "disc_nodes_changed": 6,
+   "disc_nodes_total": 8,
+   "disc_nodes_explained": true,
+   "nonspatial_changed": true,
+   "changed_by_discipline": [],
+   "added_by_storey": [
+    [
+     "Storey-1",
+     1552
+    ]
+   ]
+  },
+  {
+   "a": "Week 28 10 july IFC Schependomlaan incl planningsdata.ifc",
+   "b": "Week 29 17 july IFC Schependomlaan incl planningsdata.ifc",
+   "root_changed": true,
+   "added": 1690,
+   "deleted": 1552,
+   "changed": 0,
+   "unchanged": 0,
+   "moved_between_nodes": 0,
+   "storeys_changed": 1,
+   "storeys_total": 1,
+   "disc_nodes_changed": 6,
+   "disc_nodes_total": 8,
+   "disc_nodes_explained": true,
+   "nonspatial_changed": true,
+   "changed_by_discipline": [],
+   "added_by_storey": [
+    [
+     "Storey-1",
+     1690
+    ]
+   ]
+  },
+  {
+   "a": "Week 29 17 july IFC Schependomlaan incl planningsdata.ifc",
+   "b": "Week 30 24 july IFC Schependomlaan incl planningsdata.ifc",
+   "root_changed": true,
+   "added": 1722,
+   "deleted": 1690,
+   "changed": 0,
+   "unchanged": 0,
+   "moved_between_nodes": 0,
+   "storeys_changed": 1,
+   "storeys_total": 1,
+   "disc_nodes_changed": 6,
+   "disc_nodes_total": 8,
+   "disc_nodes_explained": true,
+   "nonspatial_changed": true,
+   "changed_by_discipline": [],
+   "added_by_storey": [
+    [
+     "Storey-1",
+     1722
+    ]
+   ]
+  },
+  {
+   "a": "Week 30 24 july IFC Schependomlaan incl planningsdata.ifc",
+   "b": "Week 37 11 sept IFC Schependomlaan incl planningsdata.ifc",
+   "root_changed": true,
+   "added": 3505,
+   "deleted": 1722,
+   "changed": 0,
+   "unchanged": 0,
+   "moved_between_nodes": 0,
+   "storeys_changed": 1,
+   "storeys_total": 1,
+   "disc_nodes_changed": 6,
+   "disc_nodes_total": 8,
+   "disc_nodes_explained": true,
+   "nonspatial_changed": true,
+   "changed_by_discipline": [],
+   "added_by_storey": [
+    [
+     "Storey-1",
+     3505
+    ]
+   ]
+  }
+ ]
+}

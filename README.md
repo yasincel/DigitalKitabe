@@ -87,6 +87,15 @@ every excluded object. Roots of models without such objects, including all roots
 Version 1.1.0 also fixes a cache key in `dkcore.set_mask` that mixed
 attribute lists of IFC2X3 and IFC4 when models of both schemas were processed in one run; roots of single models are unchanged.
 
+### Real re-exports (E7, version 1.1.0)
+
+`paper/e10_reexport_text.py A.ifc B.ifc out.json` compares two exports of the same unchanged model record by record
+and attributes every difference to regenerated GlobalIds where possible (two Revit 2027 exports of Snowdon Towers:
+236 of 7,469,604 records differ, all regenerated GlobalIds of 118 type objects and their type relations).
+`paper/e9_weekly.py` and `paper/e9_weekly_by_name.py` compare the six weekly "as planned" Synchro exports of
+Schependomlaan (buildingSMART community sample files): no GlobalId is shared between weeks, and when elements are
+matched by name with GlobalIds left out, every element is unchanged from one week to the next.
+
 ## Data (`paper/results/`)
 
 | File | Content |
@@ -95,7 +104,7 @@ attribute lists of IFC2X3 and IFC4 when models of both schemas were processed in
 | `e1_stability.json`, `ablation.json` | E1 stability and quantisation ablation |
 | `ledger.json` | Ed25519-signed, append-only **local test ledger** (a simulation; not written to a public blockchain) |
 | `sim.json` | E5 simulation results |
-| `e2b_exclusion.json`, `e7_stability.json`, `e8_revisions.json` | E7 generalisation test: roots per model and variant, fixed-rounding comparison, Schependomlaan revisions |
+| `e2b_exclusion.json`, `e7_stability.json`, `e8_revisions.json`, `e9_weekly*.json`, `e10_reexport_text.json` | E7 generalisation test: roots per model and variant, fixed-rounding comparison, Schependomlaan revisions |
 | `merkle_tree_rev0..4.json` | derived Merkle trees (digests only, hexadecimal) of the approved model and the four controlled revisions |
 | `patterns/` | Digital Kitabe patterns (SVG) for Rev0–Rev4 and the project emblem after Rev4 |
 
