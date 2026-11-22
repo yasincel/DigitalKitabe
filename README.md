@@ -108,6 +108,10 @@ drawing unchanged after a storey is inserted, the visible changes of Rev1–Rev4
 trees in `results/` alone (no IFC file needed). `paper/fig_encoding_en.py` draws the encoding, revision, fixed-rule and
 proxy figures from the same files.
 
+## Supplemental Materials
+
+`supplemental/Supplemental_Materials_JCCE.pdf` contains Figs. S1–S8 and Tables S1–S7 of the article.
+
 ## Data (`paper/results/`)
 
 | File | Content |
