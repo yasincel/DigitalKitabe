@@ -183,4 +183,4 @@ Zenodo/GitHub paketindeki `paper/` klasörü **senin çalıştırman gereken bir
 - **Kayıt dosyası** bu sürümde yereldir; ileride imzalı bir deftere ya da blockchain'e yazma adımı eklenebilir.
 - **Amblem modelde nerede durur:** Binanın bir parçası değil, projenin sembolüdür. IFC içinde fiziksel olmayan bir IfcAnnotation (DigitalKitabeEmblem) olarak bina orijininde durur.
 - **Disiplin kodları:** Ekranda makaledeki kodlar görünür: STR, WAL, FAC, OPN, CIR, FUR, SPC, OTH.
-- Araç, makaledeki kuralların aynısını kullanır: DK-C14N-1.1 ve DK-ENC-1.0.
+- Araç, makaledeki kuralların aynısını kullanır: DK-C14N-1.1 ve DK-ENC-1.1.

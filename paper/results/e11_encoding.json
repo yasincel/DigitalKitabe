@@ -1,0 +1,80 @@
+{
+ "DK-ENC-1.0": {
+  "patterns": 1000,
+  "skeleton_identical": 1000,
+  "palette_ok": 1000,
+  "storey_motifs_compatible": 0,
+  "storey_motif_orders": [
+   3,
+   5,
+   6,
+   8
+  ],
+  "centre_order": 8,
+  "storey_sectors": 18,
+  "sectors_multiple_of_centre": false,
+  "insertion_unchanged_mean": 0.04226323960669312,
+  "insertion_unchanged_min": 0.02932551319648094,
+  "insertion_unchanged_max": 0.05571847507331378,
+  "insertion_positions": 17,
+  "capacity": {
+   "root": 37,
+   "storey": 90,
+   "disc": 309,
+   "nonspatial": 16,
+   "total": 452
+  }
+ },
+ "DK-ENC-1.1": {
+  "patterns": 1000,
+  "skeleton_identical": 1000,
+  "palette_ok": 1000,
+  "storey_motifs_compatible": 1000,
+  "storey_motif_orders": [
+   6,
+   12
+  ],
+  "centre_order": 12,
+  "storey_sectors": 24,
+  "sectors_multiple_of_centre": true,
+  "insertion_unchanged_mean": 0.7488864997696206,
+  "insertion_unchanged_min": 0.5221932114882507,
+  "insertion_unchanged_max": 0.9451697127937336,
+  "insertion_positions": 17,
+  "capacity": {
+   "root": 53,
+   "storey": 90,
+   "disc": 309,
+   "nonspatial": 16,
+   "total": 468,
+   "sectors": 24,
+   "nonempty_cells": 103
+  }
+ },
+ "revisions_DK-ENC-1.1": {
+  "Rev1": [
+   "root",
+   "storey:6"
+  ],
+  "Rev2": [
+   "disc:7:DUV",
+   "root",
+   "storey:7"
+  ],
+  "Rev3": [
+   "disc:5:DON",
+   "root",
+   "storey:5"
+  ],
+  "Rev4": [
+   "nonspatial",
+   "root"
+  ]
+ },
+ "single_change_DK-ENC-1.1": {
+  "trials": 400,
+  "root": 1.0,
+  "storey": 0.975,
+  "cell": 0.8775
+ }
+}

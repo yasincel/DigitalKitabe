@@ -2,7 +2,7 @@
 
 Code and data accompanying the article
 
-> **Digital Kitabe: A content-derived, verifiable identity embedded in IFC models through historical geometric pattern grammars**
+> **Serialization-Stable, Localizable Identity for IFC Models: Canonical Merkle Commitment with a Pattern-Based Visual Layer**
 > 
 > Yasin Celik.
 
@@ -14,13 +14,14 @@ The Digital Kitabe is a model identity that is computed from the content of an I
 DigitalKitabe/
 ├── paper/              code that produced the results and figures of the article
 │   ├── dkcore.py         DK-C14N-1.1 canonicalisation, Merkle tree, revision root, branch comparison
-│   ├── dkpattern.py      DK-ENC-1.0 pattern generator (Family A star rosette, Family B hexagonal lattice)
+│   ├── dkpattern.py      DK-ENC-1.1 pattern generator (1.0 kept as rosette_v10) (Family A star rosette, Family B hexagonal lattice)
 │   ├── dksheet.py        project emblem (pattern + inscription bands + repair medallions)
 │   ├── e1_stability.py   E1  canonicalisation stability (T1, T2) and quantisation ablation   (Sec. 6.1)
 │   ├── experiments.py    E2–E4  embedding/self-reference, controlled revisions, signed ledger (Sec. 6.2)
 │   ├── simulate.py       E5  computational perceptual proxies                               (Sec. 6.3)
 │   ├── geom_extract.py, render3d.py, figures_en.py, fig_workflow_en.py,
-│   │   fig_framework_en.py, fig_emblem_en.py      figures of the article
+│   │   fig_framework_en.py, fig_emblem_en.py,
+│   │   fig_encoding_en.py                         figures of the article
 │   ├── run_all.sh / run_all.bat                   runs the full pipeline
 │   ├── input/            place the Snowdon Towers IFC file here (not included, see below)
 │   └── results/          results reported in the article (see "Data")
@@ -96,6 +97,17 @@ and attributes every difference to regenerated GlobalIds where possible (two Rev
 Schependomlaan (buildingSMART community sample files): no GlobalId is shared between weeks, and when elements are
 matched by name with GlobalIds left out, every element is unchanged from one week to the next.
 
+### Pattern encoding DK-ENC-1.1 (version 1.1.0)
+
+`paper/dkpattern.py` now implements the current encoding DK-ENC-1.1 (`rosette`): a twelve-pointed centre, a crown of
+24 petals, `max(24, 12*ceil(N/12))` storey sectors and storey motifs of order 6 and 12 only; sectors without a storey
+keep a neutral six-pointed star. The first encoding is kept as `rosette_v10` for comparison. Storey and cell channels
+draw the same bits in both versions, so only the drawing changes; Merkle trees and roots are unaffected.
+`paper/e11_encoding.py` reproduces the rule check over 1,000 random patterns, the channel capacity, the share of the
+drawing unchanged after a storey is inserted, the visible changes of Rev1–Rev4 and the single-element proxies from the
+trees in `results/` alone (no IFC file needed). `paper/fig_encoding_en.py` draws the encoding, revision, fixed-rule and
+proxy figures from the same files.
+
 ## Data (`paper/results/`)
 
 | File | Content |
@@ -105,6 +117,7 @@ matched by name with GlobalIds left out, every element is unchanged from one wee
 | `ledger.json` | Ed25519-signed, append-only **local test ledger** (a simulation; not written to a public blockchain) |
 | `sim.json` | E5 simulation results |
 | `e2b_exclusion.json`, `e7_stability.json`, `e8_revisions.json`, `e9_weekly*.json`, `e10_reexport_text.json` | E7 generalisation test: roots per model and variant, fixed-rounding comparison, Schependomlaan revisions |
+| `e11_encoding.json` | DK-ENC-1.1 vs 1.0: rule conformity, capacity, storey insertion, revision regions, single-change proxies |
 | `merkle_tree_rev0..4.json` | derived Merkle trees (digests only, hexadecimal) of the approved model and the four controlled revisions |
 | `patterns/` | Digital Kitabe patterns (SVG) for Rev0–Rev4 and the project emblem after Rev4 |
 
@@ -112,7 +125,7 @@ The Merkle trees contain only GlobalIds and SHA-256 digests; they contain no geo
 
 ## The practitioner tool (`tool/`)
 
-`tool/dkitabe.py` applies the same rules (DK-C14N-1.1, DK-ENC-1.0) to any IFC file:
+`tool/dkitabe.py` applies the same rules (DK-C14N-1.1, DK-ENC-1.1) to any IFC file:
 
 ```
 python dkitabe.py stamp    Model.ifc --note "Design approval"              # identity, emblem, stamped IFC, record

@@ -8,12 +8,17 @@ Aile A  'Yıldız rozeti' (yıldız-çokgen ailesi; Levha XIV, XXVII-1/2, XXV d�
    4 köşelik (köşe dolgusu)  -> mekânsal olmayan dal (tipler, malzemeler, proje)
 Aile B  'Altıgen örgü' (Levha XII, XX, XXXIII): satır = kat, sütun = disiplin.
 
-Kodlama sürümü: DK-ENC-1.0. Bit akışı: SHA-256(düğüm özeti || aile || bölge) ile türetilir.
+Kodlama sürümleri (bit akışı her ikisinde de SHA-256(düğüm özeti || aile || bölge)):
+  DK-ENC-1.0  ilk sürüm: sekiz kollu merkez, 16 yaprak, kat sayısı kadar sektör, 3-5-6-8 mertebeli motifler
+              (yıldız rozetinin simetri kuralını bozar; yalnızca karşılaştırma için tutulur: rosette_v10).
+  DK-ENC-1.1  güncel sürüm: on iki kollu merkez (C12), 24 yapraklı taç, S = max(24, 12*ceil(N/12)) sektör,
+              yalnızca 6 ve 12 mertebeli motifler; katı olmayan sektörler nötr altı kollu yıldızı taşır.
+Kat ve hücre kanallarının bitleri iki sürümde aynıdır; yalnızca çizim değişir.
 """
 import hashlib, math
 import numpy as np
 
-ENC_VERSION = 'DK-ENC-1.0'
+ENC_VERSION = 'DK-ENC-1.1'
 
 # Selçuklu çini paletinden esinli, parlaklık farkı yüksek 4 renk + nötr
 PALETTE = ['#173d7a', '#2a9d9a', '#e0a526', '#b5452c']  # lacivert, firuze, aşı sarısı, kiremit
@@ -62,11 +67,11 @@ def ang(i, n):
 
 
 # ---------------------------------------------------------------- Aile A
-def rosette(tree, family='A'):
-    """Döndürür: list of dict(poly, fill, region, lw)"""
+def rosette_v10(tree, family='A'):
+    """DK-ENC-1.0 (ilk sürüm). Döndürür: list of dict(poly, fill, region, lw, z, order)"""
     P = []
-    def add(poly, fill, region, lw=0.6, z=1):
-        P.append(dict(poly=poly, fill=fill, region=region, lw=lw, z=z))
+    def add(poly, fill, region, lw=0.6, z=1, order=None):
+        P.append(dict(poly=poly, fill=fill, region=region, lw=lw, z=z, order=order))
 
     root = tree['root']; ns = tree['nonspatial']
     # çerçeve (kitabe levhası)
@@ -119,18 +124,18 @@ def rosette(tree, family='A'):
         rad = 0.072
         rot = am + (0.18 if chi else -0.18)
         if var == 0:      # altı kollu yıldız
-            add(star(cx, cy, rad, rad * 0.55, 6, rot), col, reg, z=2)
+            add(star(cx, cy, rad, rad * 0.55, 6, rot), col, reg, z=2, order=6)
         elif var == 1:    # sekiz kollu yıldız
-            add(star(cx, cy, rad, rad * 0.62, 8, rot), col, reg, z=2)
+            add(star(cx, cy, rad, rad * 0.62, 8, rot), col, reg, z=2, order=8)
         elif var == 2:    # altıgen içinde fırıldak (kiral)
-            add(ngon(cx, cy, rad, 6, rot), col, reg, z=2)
+            add(ngon(cx, cy, rad, 6, rot), col, reg, z=2, order=3)
             for k in range(3):
                 a = rot + 2 * math.pi * k / 3
                 tri = [(cx, cy), (cx + rad * math.cos(a), cy + rad * math.sin(a)),
                        (cx + rad * 0.62 * math.cos(a + (0.9 if chi else -0.9)), cy + rad * 0.62 * math.sin(a + (0.9 if chi else -0.9)))]
                 add(tri, PAPER, reg, lw=0.3, z=3)
         else:             # beş kollu yıldız + merkez
-            add(star(cx, cy, rad, rad * 0.45, 5, rot), col, reg, z=2)
+            add(star(cx, cy, rad, rad * 0.45, 5, rot), col, reg, z=2, order=5)
         # radyal kenarlarda yarım yıldız uçları (desen sürekliliği)
         rr = r0 + 0.035
         add(ngon(rr * math.cos(am), rr * math.sin(am), 0.016, 4, am), col, reg, lw=0.3, z=2)
@@ -146,7 +151,7 @@ def rosette(tree, family='A'):
     # merkez sekiz kollu yıldız -> kök
     bb = Bits(root, 'A/center')
     col = PALETTE[bb.take(2)]; var = bb.take(2); rot = math.pi / 2 + (math.pi / 8 if bb.take(1) else 0)
-    add(star(0, 0, 0.2, 0.2 * 0.62, 8, rot), col, 'root', lw=0.8, z=3)
+    add(star(0, 0, 0.2, 0.2 * 0.62, 8, rot), col, 'root', lw=0.8, z=3, order=8)
     if var == 0: add(ngon(0, 0, 0.07, 8, rot), PAPER, 'root', z=4)
     elif var == 1: add(ngon(0, 0, 0.05, 60, 0), PAPER, 'root', z=4)
     elif var == 2: add(star(0, 0, 0.09, 0.05, 8, rot + math.pi / 8), PAPER, 'root', z=4)
@@ -154,10 +159,107 @@ def rosette(tree, family='A'):
     return P
 
 
-def capacity_A(tree):
+def n_sectors(N):
+    """DK-ENC-1.1: sektör sayısı merkez mertebesinin (12) katıdır ve en az 24'tür."""
+    return max(24, 12 * math.ceil(N / 12))
+
+
+def rosette(tree, family='A'):
+    """DK-ENC-1.1. Döndürür: list of dict(poly, fill, region, lw, z, order)"""
+    P = []
+    def add(poly, fill, region, lw=0.6, z=1, order=None):
+        P.append(dict(poly=poly, fill=fill, region=region, lw=lw, z=z, order=order))
+
+    root = tree['root']; ns = tree['nonspatial']
+    add([(-1.18, -1.18), (1.18, -1.18), (1.18, 1.18), (-1.18, 1.18)], PAPER, 'frame', lw=1.6, z=0)
+    # köşelikler -> mekânsal olmayan dal (on iki kollu yıldız; renk 2 + dolgu 2 bit)
+    b = Bits(ns, 'A/corner')
+    for q, (sx, sy) in enumerate([(1, 1), (-1, 1), (-1, -1), (1, -1)]):
+        col = PALETTE[b.take(2)]; var = b.take(2)
+        cx, cy = sx * 1.02, sy * 1.02
+        add(star(cx, cy, 0.13, 0.075, 6, math.pi / 2), col, 'nonspatial', z=2, order=6)
+        inner = [ngon(cx, cy, 0.05, 6, math.pi / 2), ngon(cx, cy, 0.045, 12, math.pi / 2),
+                 star(cx, cy, 0.055, 0.03, 6, math.pi / 2 + math.pi / 6), ngon(cx, cy, 0.04, 60, 0)][var]
+        add(inner, PAPER, 'nonspatial', z=3, order=[6, 12, 6, 12][var])
+    add(ngon(0, 0, 1.0, 120, 0), PAPER, 'disc-bg', lw=1.2, z=0.5)
+
+    storeys = tree['storeys']; N = len(storeys); S = n_sectors(N)
+    codes = list(storeys[0]['disc'].keys())
+    r_in, r_out = 0.655, 0.985
+    for i in range(S):
+        a0, a1 = ang(i, S)
+        for j, d in enumerate(codes):
+            row, colm = j // 2, j % 2
+            rr0 = r_in + (r_out - r_in) * row / 4; rr1 = r_in + (r_out - r_in) * (row + 1) / 4
+            aa0 = a0 + (a1 - a0) * colm / 2; aa1 = a0 + (a1 - a0) * (colm + 1) / 2
+            if i >= N:
+                add(annular(rr0, rr1, aa0, aa1, 5), EMPTY, f'reserved:{i}', lw=0.35); continue
+            node = storeys[i]['disc'][d]; reg = f'disc:{i}:{d}'
+            if node['n'] == 0:
+                add(annular(rr0, rr1, aa0, aa1, 5), EMPTY, reg, lw=0.35); continue
+            bb = Bits(node['hash'], 'A/disc')
+            col = PALETTE[bb.take(2)]; chi = bb.take(1)
+            add(annular(rr0, rr1, aa0, aa1, 5), col, reg, lw=0.35)
+            rm = (rr0 + rr1) / 2; am = (aa0 + aa1) / 2; da = (aa1 - aa0) / 2 * 0.62; dr = (rr1 - rr0) / 2 * 0.62
+            sh = (1 if chi else -1) * da * 0.45
+            dia = [(rm + dr) * math.cos(am + sh), (rm + dr) * math.sin(am + sh)], [rm * math.cos(am + da), rm * math.sin(am + da)], \
+                  [(rm - dr) * math.cos(am - sh), (rm - dr) * math.sin(am - sh)], [rm * math.cos(am - da), rm * math.sin(am - da)]
+            add([tuple(p) for p in dia], PAPER, reg, lw=0.3, z=2)
+
+    # kat halkası: motif varyantı (2 bit) yalnızca 6 ve 12 mertebeli; dönüş (1 bit) = 15°
+    r0, r1 = 0.335, 0.635
+    for i in range(S):
+        a0, a1 = ang(i, S)
+        am = (a0 + a1) / 2; rm = (r0 + r1) / 2 + 0.01
+        cx, cy = rm * math.cos(am), rm * math.sin(am); rad = 0.055
+        if i >= N:
+            reg = f'reserved:{i}'
+            add(annular(r0, r1, a0, a1, 8), PAPER, reg, lw=0.6)
+            add(star(cx, cy, rad, rad * 0.55, 6, am), EMPTY, reg, z=2, order=6)
+            continue
+        bb = Bits(storeys[i]['hash'], 'A/storey')
+        col = PALETTE[bb.take(2)]; var = bb.take(2); chi = bb.take(1)
+        reg = f'storey:{i}'
+        add(annular(r0, r1, a0, a1, 8), PAPER, reg, lw=0.6)
+        rot = am + (math.pi / 12 if chi else 0)
+        if var == 0:      # altı kollu yıldız
+            add(star(cx, cy, rad, rad * 0.55, 6, rot), col, reg, z=2, order=6)
+        elif var == 1:    # sivri altı kollu yıldız
+            add(star(cx, cy, rad, rad * 0.36, 6, rot), col, reg, z=2, order=6)
+        elif var == 2:    # altıgen içinde altı kollu yıldız
+            add(ngon(cx, cy, rad, 6, rot), col, reg, z=2, order=6)
+            add(star(cx, cy, rad * 0.8, rad * 0.45, 6, rot + math.pi / 6), PAPER, reg, lw=0.3, z=3, order=6)
+        else:             # on iki kollu yıldız
+            add(star(cx, cy, rad, rad * 0.72, 12, rot), col, reg, z=2, order=12)
+
+    # taç: 24 yaprak -> kök (2 bit renk)
+    bb = Bits(root, 'A/crown')
+    for k in range(24):
+        a = math.pi / 2 - 2 * math.pi * k / 24; w = math.pi / 24
+        pet = [(0.205 * math.cos(a - w), 0.205 * math.sin(a - w)), (0.318 * math.cos(a), 0.318 * math.sin(a)),
+               (0.205 * math.cos(a + w), 0.205 * math.sin(a + w)), (0.17 * math.cos(a), 0.17 * math.sin(a))]
+        add(pet, PALETTE[bb.take(2)], 'root', lw=0.5, z=2)
+    # merkez on iki kollu yıldız -> kök (renk 2 + dolgu 2 + dönüş 1 bit)
+    bb = Bits(root, 'A/center')
+    col = PALETTE[bb.take(2)]; var = bb.take(2); rot = math.pi / 2 + (math.pi / 12 if bb.take(1) else 0)
+    add(star(0, 0, 0.2, 0.2 * 0.72, 12, rot), col, 'root', lw=0.8, z=3, order=12)
+    if var == 0: add(ngon(0, 0, 0.08, 12, rot), PAPER, 'root', z=4, order=12)
+    elif var == 1: add(ngon(0, 0, 0.06, 60, 0), PAPER, 'root', z=4, order=12)
+    elif var == 2: add(star(0, 0, 0.1, 0.06, 12, rot + math.pi / 12), PAPER, 'root', z=4, order=12)
+    else: add(ngon(0, 0, 0.09, 3, rot), PAPER, 'root', z=4, order=3)
+    return P
+
+
+def capacity_A_v10(tree):
     N = len(tree['storeys']); nonempty = sum(1 for s in tree['storeys'] for d in s['disc'].values() if d['n'])
     return dict(root=5 + 32, storey=N * 5, disc=nonempty * 3, nonspatial=4 * 4,
                 total=5 + 32 + N * 5 + nonempty * 3 + 16)
+
+
+def capacity_A(tree):
+    N = len(tree['storeys']); nonempty = sum(1 for s in tree['storeys'] for d in s['disc'].values() if d['n'])
+    return dict(root=5 + 48, storey=N * 5, disc=nonempty * 3, nonspatial=4 * 4,
+                total=5 + 48 + N * 5 + nonempty * 3 + 16, sectors=n_sectors(N), nonempty_cells=nonempty)
 
 
 # ---------------------------------------------------------------- Aile B
@@ -231,6 +333,17 @@ def to_svg(P, path, size=800):
         out.append(f'<polygon points="{pts}" fill="{p["fill"]}" stroke="{INK}" stroke-width="{p["lw"] * 1.2:.2f}" data-region="{p["region"]}"/>')
     out.append('</svg>')
     open(path, 'w').write('\n'.join(out))
+
+
+def load_tree_json(path):
+    """Merkle tree saved by experiments.py (results/merkle_tree_rev*.json) -> tree dict with bytes digests."""
+    import json
+    t = json.load(open(path)); b = bytes.fromhex
+    t['root'], t['spatial'], t['nonspatial'] = b(t['root']), b(t['spatial']), b(t['nonspatial'])
+    for s in t['storeys']:
+        s['hash'] = b(s['hash'])
+        for d in s['disc'].values(): d['hash'] = b(d['hash'])
+    return t
 
 
 def kitabe_layout(rev):

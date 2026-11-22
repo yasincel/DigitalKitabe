@@ -1,7 +1,7 @@
 # Digital Kitabe – command-line tool
 
 Creates and verifies a Digital Kitabe (canonical Merkle root + historical-pattern identity) for IFC models.
-Same canonicalisation (DK-C14N-1.1) and encoding (DK-ENC-1.0) as the accompanying article.
+Same canonicalisation (DK-C14N-1.1) and encoding (DK-ENC-1.1) as the accompanying article.
 
     pip install -r requirements.txt
     python dkitabe.py stamp  MODEL.ifc [--previous RECORD.json] [--note "..."]

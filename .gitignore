@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+paper/out/
+paper/figures/
